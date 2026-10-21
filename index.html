@@ -120,8 +120,7 @@ function drawAnimatedAnt(a,wx,wy,kind='worker'){
   const bob=walking?Math.sin(phase*1.9)*2.5:0;
   const sway=walking?Math.sin(phase*1.15)*0.045:0;
   x.save();x.translate(Math.round(q.x),Math.round(q.y+bob));
-  if(dir==='down')x.rotate(Math.PI+sway);
-  else x.rotate(sway);
+  x.rotate(sway); // Atlas frames already face the correct direction.
   // Shadow under feet (not rotated with sprite).
   x.globalAlpha=0.24;rect(-sizeW*.35,sizeH*.35,sizeW*.70,12,'#11180e');x.globalAlpha=1;
   // Animate three pairs in alternating tripod gait; extend past original sprite legs.
