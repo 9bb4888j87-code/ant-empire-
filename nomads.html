@@ -1,9 +1,9 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Муравьиная империя — Лес V3</title><style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#09180f;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}#game{position:relative;width:100%;height:100%;min-height:490px;overflow:hidden;isolation:isolate;background:#143522;touch-action:none}#world{width:100%;height:100%;display:block;touch-action:none}.hud{position:absolute;z-index:3;pointer-events:none}.hud>*{pointer-events:auto}.top{top:0;left:0;right:0;padding:12px 14px;background:linear-gradient(180deg,rgba(4,15,12,.96),rgba(4,15,12,.69) 72%,transparent);display:flex;flex-direction:column;gap:8px}.topline{display:flex;gap:10px;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:8px;white-space:nowrap}.crest{width:34px;height:34px;border:1px solid #d6a74b80;background:linear-gradient(140deg,#344936,#182820);border-radius:10px;display:grid;place-items:center;font-size:21px;box-shadow:0 2px 20px #efbb4130}.brand{font-size:15px;font-weight:900;letter-spacing:1px;color:#ffe3a1;text-shadow:0 1px 8px #10110f}.subtitle{font-size:9px;color:#afc7b3;letter-spacing:2px}.clock{display:flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #ffffff2b;border-radius:9px;background:#15271ddc;font-size:11px;color:#e8efde}.bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}.pill{display:inline-flex;align-items:center;gap:4px;padding:6px 10px;border:1px solid #ffffff20;background:#071d18c9;border-radius:9px;font-size:12px;white-space:nowrap;backdrop-filter:blur(7px)}.pill b{font-size:12px;color:#f9e0a1}.pill small{color:#b5d5bc;font-size:10px}.side{top:112px;right:13px;display:flex;flex-direction:column;gap:9px;align-items:flex-end}.glass{background:linear-gradient(140deg,#0d241edb,#071712e9);border:1px solid #9ed4a532;box-shadow:0 9px 30px #050f0c66;border-radius:12px;backdrop-filter:blur(10px)}.minimap{width:132px;height:132px;display:block;border-radius:11px;background:#122e1c;border:1px solid #8bcf8b40}.rightInfo{padding:9px;min-width:132px;font-size:11px;color:#d1efcf}.rightInfo strong{color:#ffe4a7}.rightInfo .mini{font-size:10px;color:#a7c5ab;line-height:1.7}.bottom{bottom:0;left:0;right:0;padding:36px 12px 11px;background:linear-gradient(0deg,#071811fc,#071811ea 50%,transparent);display:flex;justify-content:space-between;align-items:flex-end;gap:8px}.leftStatus{padding:9px 12px;min-width:178px;max-width:275px}.statName{color:#ffe6a6;font-weight:800;font-size:12px}.hpBg{height:6px;border-radius:4px;background:#4d2c32;margin:6px 0 5px;overflow:hidden}.hpFill{width:100%;height:100%;background:linear-gradient(90deg,#e44840,#ff9e65);transition:width .2s}.help{font-size:10px;color:#b0c3b6;line-height:1.45;max-width:300px}.nav{display:flex;justify-content:flex-end;gap:5px;flex-wrap:wrap;max-width:750px}.nav button,.panel button,.quick button,.viewBtns button{color:#f1efdc;background:linear-gradient(155deg,#284736ed,#12271fec);border:1px solid #d9ca9542;border-radius:10px;padding:8px 9px;min-height:37px;box-shadow:inset 0 1px #ffffff12;transition:background .12s}.nav button{font-size:11px;font-weight:700;min-width:59px;display:flex;flex-direction:column;align-items:center;gap:3px}.nav button i{font-size:19px;font-style:normal}.nav button:hover,.panel button:hover,.quick button:hover{background:#4c6844}.nav button.active,.panel button.selected,.viewBtns button.selected{background:linear-gradient(150deg,#a17d34,#5d431e);border-color:#ffcc6c99;color:#fff5d2}.quick{position:absolute;bottom:92px;left:12px;display:flex;gap:5px;z-index:4}.quick button{font-size:11px;padding:5px 9px;min-height:28px}.viewBtns{position:absolute;left:13px;top:118px;display:flex;gap:6px;z-index:4}.viewBtns button{padding:7px 12px;font-size:12px;font-weight:800}.toast{position:absolute;z-index:5;left:50%;top:119px;transform:translateX(-50%);background:#071e17e8;border:1px solid #eac58166;padding:9px 14px;border-radius:10px;color:#f9eac8;font-size:12px;pointer-events:none;transition:opacity .4s;max-width:85%;text-align:center;box-shadow:0 12px 30px #0008}.panel{position:absolute;z-index:8;right:12px;top:110px;bottom:97px;width:min(354px,calc(100% - 24px));padding:15px;overflow-y:auto;overscroll-behavior:contain;display:none;pointer-events:auto}.panel.open{display:block}.panel h2{font-size:17px;margin:0 0 4px;color:#ffe2a1}.panel h3{font-size:12px;color:#fad99a;text-transform:uppercase;letter-spacing:1px;margin:14px 0 7px}.panel p{font-size:12px;line-height:1.55;color:#b9d4bf;margin:4px 0 8px}.panelRow{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 0;border-bottom:1px solid #ffffff16;font-size:12px}.panelRow strong{color:#ffdda2}.panel button{font-size:12px;padding:7px 9px;min-height:32px;white-space:nowrap}.panel button:disabled{opacity:.34;cursor:not-allowed}.panel .gridBtns{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:8px 0}.panel .gridBtns button{white-space:normal}.close{position:absolute;right:10px;top:9px}.tag{display:inline-flex;align-items:center;border-radius:5px;background:#7aa15c33;border:1px solid #aec17d55;padding:2px 5px;color:#dbf6bd;font-size:10px}.heading{display:flex;align-items:center;gap:6px}.progress{height:5px;background:#ffffff18;border-radius:4px;overflow:hidden}.progress>div{height:100%;background:#edc36c}.notice{background:#5a421d63;border:1px solid #edbb6a5c;border-radius:8px;padding:8px;font-size:11px;color:#ffdf9e}.scrolltext{color:#ddc995;font-size:11px}.small{font-size:10px;color:#bcd2b8}.headline{position:absolute;top:49%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:2;text-shadow:0 3px 18px #000a;animation:fadeOut 5s forwards}.headline h1{margin:0;font-size:clamp(24px,4vw,44px);letter-spacing:3px;color:#ffe4a2}.headline p{margin:4px;font-size:12px;letter-spacing:2px;color:#f4f1d5}@keyframes fadeOut{0%,60%{opacity:1}100%{opacity:0;visibility:hidden}}.mobiletip{display:none}
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Муравьиная империя — Королевство V5</title><style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#09180f;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}#game{position:relative;width:100%;height:100%;min-height:490px;overflow:hidden;isolation:isolate;background:#143522;touch-action:none}#world{width:100%;height:100%;display:block;touch-action:none}.hud{position:absolute;z-index:3;pointer-events:none}.hud>*{pointer-events:auto}.top{top:0;left:0;right:0;padding:12px 14px;background:linear-gradient(180deg,rgba(4,15,12,.96),rgba(4,15,12,.69) 72%,transparent);display:flex;flex-direction:column;gap:8px}.topline{display:flex;gap:10px;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:8px;white-space:nowrap}.crest{width:34px;height:34px;border:1px solid #d6a74b80;background:linear-gradient(140deg,#344936,#182820);border-radius:10px;display:grid;place-items:center;font-size:21px;box-shadow:0 2px 20px #efbb4130}.brand{font-size:15px;font-weight:900;letter-spacing:1px;color:#ffe3a1;text-shadow:0 1px 8px #10110f}.subtitle{font-size:9px;color:#afc7b3;letter-spacing:2px}.clock{display:flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #ffffff2b;border-radius:9px;background:#15271ddc;font-size:11px;color:#e8efde}.bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}.pill{display:inline-flex;align-items:center;gap:4px;padding:6px 10px;border:1px solid #ffffff20;background:#071d18c9;border-radius:9px;font-size:12px;white-space:nowrap;backdrop-filter:blur(7px)}.pill b{font-size:12px;color:#f9e0a1}.pill small{color:#b5d5bc;font-size:10px}.side{top:112px;right:13px;display:flex;flex-direction:column;gap:9px;align-items:flex-end}.glass{background:linear-gradient(140deg,#0d241edb,#071712e9);border:1px solid #9ed4a532;box-shadow:0 9px 30px #050f0c66;border-radius:12px;backdrop-filter:blur(10px)}.minimap{width:132px;height:132px;display:block;border-radius:11px;background:#122e1c;border:1px solid #8bcf8b40}.rightInfo{padding:9px;min-width:132px;font-size:11px;color:#d1efcf}.rightInfo strong{color:#ffe4a7}.rightInfo .mini{font-size:10px;color:#a7c5ab;line-height:1.7}.bottom{bottom:0;left:0;right:0;padding:36px 12px 11px;background:linear-gradient(0deg,#071811fc,#071811ea 50%,transparent);display:flex;justify-content:space-between;align-items:flex-end;gap:8px}.leftStatus{padding:9px 12px;min-width:178px;max-width:275px}.statName{color:#ffe6a6;font-weight:800;font-size:12px}.hpBg{height:6px;border-radius:4px;background:#4d2c32;margin:6px 0 5px;overflow:hidden}.hpFill{width:100%;height:100%;background:linear-gradient(90deg,#e44840,#ff9e65);transition:width .2s}.help{font-size:10px;color:#b0c3b6;line-height:1.45;max-width:300px}.nav{display:flex;justify-content:flex-end;gap:5px;flex-wrap:wrap;max-width:750px}.nav button,.panel button,.quick button,.viewBtns button{color:#f1efdc;background:linear-gradient(155deg,#284736ed,#12271fec);border:1px solid #d9ca9542;border-radius:10px;padding:8px 9px;min-height:37px;box-shadow:inset 0 1px #ffffff12;transition:background .12s}.nav button{font-size:11px;font-weight:700;min-width:59px;display:flex;flex-direction:column;align-items:center;gap:3px}.nav button i{font-size:19px;font-style:normal}.nav button:hover,.panel button:hover,.quick button:hover{background:#4c6844}.nav button.active,.panel button.selected,.viewBtns button.selected{background:linear-gradient(150deg,#a17d34,#5d431e);border-color:#ffcc6c99;color:#fff5d2}.quick{position:absolute;bottom:92px;left:12px;display:flex;gap:5px;z-index:4}.quick button{font-size:11px;padding:5px 9px;min-height:28px}.viewBtns{position:absolute;left:13px;top:118px;display:flex;gap:6px;z-index:4}.viewBtns button{padding:7px 12px;font-size:12px;font-weight:800}.toast{position:absolute;z-index:5;left:50%;top:175px;transform:translateX(-50%);background:#071e17e8;border:1px solid #eac58166;padding:9px 14px;border-radius:10px;color:#f9eac8;font-size:12px;pointer-events:none;transition:opacity .4s;max-width:85%;text-align:center;box-shadow:0 12px 30px #0008}.panel{position:absolute;z-index:8;right:12px;top:110px;bottom:97px;width:min(354px,calc(100% - 24px));padding:15px;overflow-y:auto;overscroll-behavior:contain;display:none;pointer-events:auto}.panel.open{display:block}.panel h2{font-size:17px;margin:0 0 4px;color:#ffe2a1}.panel h3{font-size:12px;color:#fad99a;text-transform:uppercase;letter-spacing:1px;margin:14px 0 7px}.panel p{font-size:12px;line-height:1.55;color:#b9d4bf;margin:4px 0 8px}.panelRow{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 0;border-bottom:1px solid #ffffff16;font-size:12px}.panelRow strong{color:#ffdda2}.panel button{font-size:12px;padding:7px 9px;min-height:32px;white-space:nowrap}.panel button:disabled{opacity:.34;cursor:not-allowed}.panel .gridBtns{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:8px 0}.panel .gridBtns button{white-space:normal}.close{position:absolute;right:10px;top:9px}.tag{display:inline-flex;align-items:center;border-radius:5px;background:#7aa15c33;border:1px solid #aec17d55;padding:2px 5px;color:#dbf6bd;font-size:10px}.heading{display:flex;align-items:center;gap:6px}.progress{height:5px;background:#ffffff18;border-radius:4px;overflow:hidden}.progress>div{height:100%;background:#edc36c}.notice{background:#5a421d63;border:1px solid #edbb6a5c;border-radius:8px;padding:8px;font-size:11px;color:#ffdf9e}.scrolltext{color:#ddc995;font-size:11px}.small{font-size:10px;color:#bcd2b8}.headline{position:absolute;top:49%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:2;text-shadow:0 3px 18px #000a;animation:fadeOut 5s forwards}.headline h1{margin:0;font-size:clamp(24px,4vw,44px);letter-spacing:3px;color:#ffe4a2}.headline p{margin:4px;font-size:12px;letter-spacing:2px;color:#f4f1d5}@keyframes fadeOut{0%,60%{opacity:1}100%{opacity:0;visibility:hidden}}.mobiletip{display:none}@media(max-width:700px){#toast{top:auto!important;bottom:172px!important;max-width:82%!important}}
 @media(max-width:700px){.top{padding:7px 7px}.brand{font-size:12px}.crest{width:29px;height:29px}.subtitle{font-size:8px}.clock{font-size:10px;padding:5px}.pill{padding:4px 7px;font-size:10px}.pill b{font-size:11px}.side{top:104px;right:7px}.minimap{height:94px;width:94px}.rightInfo{min-width:94px;padding:6px;font-size:10px}.rightInfo .mini{font-size:9px}.viewBtns{top:102px;left:6px}.viewBtns button{padding:7px;font-size:11px}.bottom{padding:30px 5px 6px;flex-direction:column;align-items:stretch;gap:4px}.leftStatus{max-width:100%;min-width:0;padding:6px 8px}.leftStatus .help{display:none}.nav{max-width:100%;flex-wrap:nowrap;justify-content:space-between;gap:2px;overflow-x:auto}.nav button{padding:6px 5px;font-size:9px;min-width:47px;min-height:45px}.nav button i{font-size:16px}.quick{bottom:112px;left:5px}.panel{right:5px;top:102px;bottom:116px;width:min(340px,calc(100% - 10px))}.toast{top:96px;font-size:10px}.mobiletip{display:inline}.headline p{font-size:10px}}
 #world{image-rendering:pixelated} .pixel-icon{image-rendering:pixelated;flex-shrink:0} .nav button i{display:flex;align-items:center;justify-content:center;min-height:27px} .pill{gap:6px} .bar{gap:5px} .nav button{min-height:60px} #game .nav button img{display:block;filter:drop-shadow(0 1px 2px #000a)}
 #game .viewBtns{display:flex;gap:5px;flex-wrap:wrap;max-width:calc(100% - 130px)}#game .viewBtns button{white-space:nowrap}#game .viewBtns button.tree-selected{background:#85612f;color:#fff3c2;border-color:#f4c976}#game .treeTip{position:absolute;top:175px;left:8px;z-index:2;background:#0b241ddc;color:#ffdc95;padding:5px 7px;border-radius:8px;font-weight:bold;font-size:10px;pointer-events:none}#game .viewBtns button{font-size:11px}@media(max-width:700px){#game .viewBtns{max-width:calc(100% - 110px);gap:3px}#game .viewBtns button{padding:6px 5px;font-size:10px}}
-</style></head><body><div id="game"><canvas id="world"></canvas><div class="hud top"><div class="topline"><div class="logo"><div class="crest">🐜</div><div><div class="brand">МУРАВЬИНАЯ ИМПЕРИЯ</div><div class="subtitle">ЖИВОЙ МИР · ЛЕС V4</div></div></div><div class="clock"><span id="day">☀️ День 1</span><span id="tm">00:00</span><span id="spd">×1</span></div></div><div class="bar" id="resourceBar"></div></div><div class="viewBtns"><button id="surfaceBtn" class="selected">🌿 Поверхность</button><button id="nestBtn">🕳️ Подземелье</button><button id="treeBtn">🌳 Дерево</button></div><div class="hud side" id="side"><canvas id="minimap" class="minimap" width="264" height="264"></canvas><div class="glass rightInfo"><div><strong id="colonySummary">Колония · 7</strong></div><div class="mini" id="armySummary">Рабочие 5 · Солдаты 0</div><div class="mini" id="eggSummary">Яйца 0/3</div><div class="mini" id="objective">Цель: укрепить колонию</div></div></div><div class="toast" id="toast" style="opacity:0"></div><div class="headline" id="intro"><h1>ПРОБУЖДЕНИЕ КОЛОНИИ</h1><p>Один командир. Одна королева. Бесконечный мир.</p></div><div class="quick"><button id="speedBtn">⏩ ×1</button><button id="zoomIn">＋</button><button id="zoomOut">－</button><button id="autoBtn">🤖 Авто</button><button id="digBtn" title="Раскопка">⛏️ Копать</button></div><div class="hud bottom"><div class="glass leftStatus"><div class="statName">👑 Командир · <span id="playerLv">ур. 1</span> <span id="currentTarget" class="small">· свободен</span></div><div class="hpBg"><div class="hpFill" id="healthBar"></div></div><div class="help" id="help">Нажми на землю — идти. На врага — атаковать. Потяни карту — осмотреть мир.</div></div><div class="nav" id="nav"><button data-panel="colony"><i>🏡</i>Колония</button><button data-panel="army"><i>⚔️</i>Армия</button><button data-panel="build"><i>🏗️</i>Стройка</button><button data-panel="skills"><i>✨</i>Навыки</button><button data-panel="diplomacy"><i>🤝</i>Дипломатия</button><button data-panel="help"><i>❔</i>Помощь</button></div></div><div id="panel" class="panel glass"></div></div><script>
+#world{image-rendering:pixelated} .panelRow button{flex-shrink:0} #panel{overscroll-behavior:contain} .gameHint{font-size:10px;opacity:.8;line-height:1.45} .branchTabs{display:flex;gap:5px;overflow:auto;padding-bottom:8px;scrollbar-width:thin}.branchTabs button{white-space:nowrap;min-width:max-content}.caveBadge{font-size:10px;color:#e3c783} @media(max-width:700px){#panel{max-width:calc(100vw - 12px)}.branchTabs{max-width:100%}}</style></head><body><div id="game"><canvas id="world"></canvas><div class="hud top"><div class="topline"><div class="logo"><div class="crest">🐜</div><div><div class="brand">МУРАВЬИНАЯ ИМПЕРИЯ</div><div class="subtitle">ЖИВОЙ МИР · КОЛОНИЯ V5</div></div></div><div class="clock"><span id="day">☀️ День 1</span><span id="tm">00:00</span><span id="spd">×1</span></div></div><div class="bar" id="resourceBar"></div></div><div class="viewBtns"><button id="surfaceBtn" class="selected">🌿 Поверхность</button><button id="nestBtn">🕳️ Подземелье</button><button id="treeBtn">🌳 Дерево</button></div><div class="hud side" id="side"><canvas id="minimap" class="minimap" width="264" height="264"></canvas><div class="glass rightInfo"><div><strong id="colonySummary">Колония · 7</strong></div><div class="mini" id="armySummary">Рабочие 5 · Солдаты 0</div><div class="mini" id="eggSummary">Яйца 0/3</div><div class="mini" id="objective">Цель: укрепить колонию</div></div></div><div class="toast" id="toast" style="opacity:0"></div><div class="quick"><button id="speedBtn">⏩ ×1</button><button id="zoomIn">＋</button><button id="zoomOut">－</button><button id="autoBtn">🤖 Авто</button><button id="digBtn" title="Раскопка">⛏️ Копать</button></div><div class="hud bottom"><div class="glass leftStatus"><div class="statName">👑 Командир · <span id="playerLv">ур. 1</span> <span id="currentTarget" class="small">· свободен</span></div><div class="hpBg"><div class="hpFill" id="healthBar"></div></div><div class="help" id="help">Нажми на землю — идти. На врага — атаковать. Потяни карту — осмотреть мир.</div></div><div class="nav" id="nav"><button data-panel="colony"><i>🏡</i>Колония</button><button data-panel="army"><i>⚔️</i>Армия</button><button data-panel="build"><i>🏗️</i>Стройка</button><button data-panel="skills"><i>✨</i>Навыки</button><button data-panel="diplomacy"><i>🤝</i>Дипломатия</button><button data-panel="help"><i>❔</i>Помощь</button></div></div><div id="panel" class="panel glass"></div></div><script>
 (()=>{
 'use strict';
 const game=document.getElementById('game'),canvas=document.getElementById('world'),ctx=canvas.getContext('2d',{alpha:false}),mini=document.getElementById('minimap'),mc=mini.getContext('2d');
@@ -11,6 +11,7 @@ const $=id=>document.getElementById(id),PI=Math.PI,TAU=2*Math.PI;
 let w=0,h=0,dpr=1,clock=0,renderT=0,last=performance.now(),zoom=1.12,cam={x:0,y:0,offsetX:0,offsetY:0,freeUntil:0},panel='',view='surface',toastTimeout=0,frame=0,scaleTime=1,attackMode=false,workMode='auto',digMode=false;
 const R={mush:0,leaf:0,resin:0,nectar:0};
 const digUnit=9,dug=new Set();let toDig=[],digProgress=0;
+const pendingReturns={leaf:0,mush:0,resin:0,nectar:0};let returnClock=0;
 const sites={};let repairClock=0;let playerGather=0;
 // Деревья — самостоятельные локации: термиты существуют только внутри смоляных стволов.
 const treeZones=new Map();let activeTree=null,treeReturn=null,treeRespawnTimer=0;
@@ -19,15 +20,53 @@ function aliveAt(type,list){return list.filter(e=>e.type===type).length;}
 
 
 const state={hp:100,maxHp:100,playerX:0,playerY:26,pdest:null,target:null,lv:1,xp:0,sp:0,kills:0,queenHP:500,queenLv:1,day:1,time:0,armyOrder:'follow',armyTarget:null,eggClock:0,incClock:0,eggs:[],queue:[],events:[],research:0,repair:true,worked:0};
+state.queenAlive=true;state.royalPortions=0;state.queenIncubation=0;state.royalLarvae=1;state.queenFormerLevel=1;state.queenEvacuated=false;state.queenRoomId='queen';
+function royalPortion(){
+ if(state.queenAlive){notify('👑 Королева жива — запасные порции пока не нужны.');return}
+ if(state.royalLarvae<1){notify('🥚 В запасе нет подходящей личинки');return}
+ if(state.royalPortions>=3){notify('👑 Все порции готовы, идёт выращивание');return}
+ if(R.resin<1000||R.nectar<500||R.mush<10000){notify('Нужно 1000 🟠, 500 🍯 и 10 000 🍄');return}
+ R.resin-=1000;R.nectar-=500;R.mush-=10000;state.royalPortions++;
+ notify('👑 Порция маточного корма '+state.royalPortions+'/3');
+}
 const roomDefs=[['queen','👑','Королевская'],['barracks','⚔️','Казармы'],['incubator','🥚','Инкубатор'],['fungus','🍄','Грибница'],['leaf','🍃','Склад листьев'],['resin','🟠','Склад смолы'],['nectar','🍯','Хранилище нектара'],['training','🥋','Тренировочная'],['hospital','❤️','Лечебница'],['lab','🔬','Лаборатория'],['guard','🛡️','Караульная'],['command','📯','Командная']];
 const rooms={queen:{level:1,hp:1000},incubator:{level:1,hp:1000},fungus:{level:1,hp:1000},leaf:{level:1,hp:1000}};
-const roomLayout={queen:[0,-32],incubator:[-135,-118],fungus:[130,-116],leaf:[-175,80],barracks:[175,82],resin:[-300,0],nectar:[300,-12],training:[-298,-212],hospital:[290,-213],lab:[-295,218],guard:[295,218],command:[0,220]};
+let placingRoomId=null;const roomLayout={queen:[0,-32],incubator:[-135,-118],fungus:[130,-116],leaf:[-175,80],barracks:[175,82],resin:[-300,0],nectar:[300,-12],training:[-298,-212],hospital:[290,-213],lab:[-295,218],guard:[295,218],command:[0,220]};
 const roomNames=Object.fromEntries(roomDefs.map(([id,icon,name])=>[id,name]));
 const player={x:0,y:26,hp:100,dir:0,walk:0,hit:0};
 const workers=Array.from({length:5},(_,i)=>({x:Math.cos(i*TAU/5)*34,y:26+Math.sin(i*TAU/5)*34,job:i<3?'mush':'leaf',dest:null,carry:null,target:null,phase:'seek',speed:70,walk:i,delay:i*.6, hp:100}));
 const soldiers=[],elites=[];
 const skills={attack:0,defense:0,speed:0,command:0};
-const aiColonies=[{x:-1250,y:450,name:'Красные челюсти',size:90,relation:-100,known:false,scout:null,raid:[],phase:'scout',cooldown:0}];
+const skillNames=[['attack','⚔️ Атака'],['defense','🛡️ Защита'],['agility','💨 Ловкость'],['gather','🍄 Сбор'],['command','👑 Командование'],['evolution','🧬 Эволюция'],['regeneration','❤️ Регенерация'],['explore','🧭 Исследование'],['stealth','🥷 Скрытность'],['tactics','🎯 Тактика'],['biology','🔬 Биология'],['construction','🏗️ Строительство'],['authority','🏰 Власть'],['survival','🌲 Выживание'],['mastery','✨ Мастерство']];
+const skillsDetailed={};let currentSkillBranch='attack';
+const skillTrackNames={
+ attack:['Жвалы','Сила укуса','Меткость','Боевой напор'],
+ defense:['Хитин','Выдержка','Укрытие','Реакция'],
+ agility:['Быстрый шаг','Поворот','Рывок','Манёвр'],
+ gather:['Следопыт ресурсов','Логистика','Переноска','Возврат'],
+ command:['Сигнал','Формация','Марш','Дисциплина'],
+ evolution:['Панцирь потомства','Выносливость','Размер','Развитие'],
+ regeneration:['Раны','Отдых','Восстановление','Живучесть'],
+ explore:['Карта','Следы','Ориентация','Разведка'],
+ stealth:['Тишина','Маскировка','Скрытые тропы','Запах'],
+ tactics:['Засада','Фланг','Штурм','Оборона'],
+ biology:['Здоровье королевы','Уход','Питание','Личинки'],
+ construction:['План','Маршрут','Стройка','Материалы'],
+ authority:['Переговоры','Влияние','Репутация','Договоры'],
+ survival:['Опасность','Уклонение','Живучесть','Защита'],
+ mastery:['Опыт','Обучение','Знания','Мастерство']
+};
+function learnedCount(branch){let n=0;for(const k of Object.keys(skillsDetailed))if(k.startsWith(branch+'-')&&skillsDetailed[k])n++;return n}
+
+const skillsAll=skillNames.flatMap(([branch])=>Array.from({length:20},(_,i)=>({branch,id:branch+'-'+i,chain:i%4,tier:Math.floor(i/4)+1,requires:i>=4?branch+'-'+(i-4):null})));
+function canLearnSkill(node){return state.sp>0&&state.lv<=1000&&!skillsDetailed[node.id]&&(!node.requires||skillsDetailed[node.requires])}
+const aiColonies=[
+{x:-1250,y:450,name:'Красные челюсти',size:90,relation:-100,known:false,scout:null,raid:[],phase:'scout',cooldown:0,status:'war'},
+{x:1850,y:-900,name:'Теневые стражи',size:120,relation:-25,known:false,scout:null,raid:[],phase:'neutral',cooldown:0,status:'neutral'},
+{x:-800,y:-1700,name:'Золотые корни',size:75,relation:25,known:false,scout:null,raid:[],phase:'neutral',cooldown:0,status:'neutral'},
+{x:2100,y:1650,name:'Лесная федерация',size:180,relation:45,known:false,scout:null,raid:[],phase:'neutral',cooldown:0,status:'neutral'}
+];let diplomacyClock=0;
+let nectarTime=0; let pollenWarning=false;
 const nodes=[],enemies=[],particles=[],floaters=[];
 let eid=0;const exploredChunks=new Set();const pheromones=[];let pheromoneMark=0;
 const rseed=(x,y,s=0)=>{let v=Math.sin(x*127.1+y*311.7+s*73.3)*43758.5453;return v-Math.floor(v)};
@@ -35,14 +74,18 @@ const rand=(a,b)=>a+Math.random()*(b-a);const dist=(a,b)=>Math.hypot(a.x-b.x,a.y
 const fmt=n=>Math.floor(n).toLocaleString('ru-RU');
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const notify=(msg,dur=3500)=>{const e=$('toast');e.textContent=msg;e.style.opacity=1;clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>e.style.opacity=0,dur);state.events.unshift(msg);state.events.length=Math.min(state.events.length,8)};
-const addNode=(kind,x,y,amount)=>nodes.push({kind,x,y,amount,max:amount,id:++eid,guard:false});
+const addNode=(kind,x,y,amount)=>{
+ const n={kind,x,y,amount,max:amount,id:++eid,guard:false,beeCount:0,beeCheck:0,flowerHours:0};
+ if(kind==='nectar'){n.beeCount=Math.random()<.5?3:0;n.guard=n.beeCount>0}
+ nodes.push(n);return n;
+};
 for(let i=0;i<14;i++){let a=TAU*i/14,rr=135+(i%4)*45;addNode(i%3===0?'leaf':'mush',Math.cos(a)*rr+rand(-22,22),Math.sin(a)*rr+rand(-22,22),i%3===0?1200:1500)}
 for(let i=0;i<120;i++){let a=rand(0,TAU),rr=rand(300,2400),kind=Math.random()<.40?'leaf':'mush';addNode(kind,Math.cos(a)*rr,Math.sin(a)*rr,kind==='leaf'?1200:1500)}
 addNode('resin',290,-195,50000);addNode('resin',810,130,50000);addNode('nectar',-620,-450,500);
 // От старта виден лес: обычные деревья плотные, деревья со смолой редкие.
-for(let i=0;i<155;i++){const a=i*2.39996,rr=175+Math.sqrt(i/155)*1580;
+for(let i=0;i<110;i++){const a=i*2.39996,rr=255+Math.sqrt(i/110)*1580;
  const x=Math.cos(a)*rr+(rseed(i,43)-.5)*90,y=Math.sin(a)*rr+(rseed(i,98)-.5)*90;
- if(Math.hypot(x,y)>105)addNode('tree',x,y,0)}
+ if(Math.hypot(x,y)>245)addNode('tree',x,y,0)}
 addNode('nectar',-650,-480,500);
 for(let j=0;j<16;j++){let a=rand(0,TAU),rr=rand(350,2100);if(j%4===0)addNode('resin',Math.cos(a)*rr,Math.sin(a)*rr,50000)}
 function extendWorld(){const cell=540,cx=Math.floor(player.x/cell),cy=Math.floor(player.y/cell);
@@ -58,9 +101,9 @@ function extendWorld(){const cell=540,cx=Math.floor(player.x/cell),cy=Math.floor
    else if(n<.98)addNode('nectar',x,y,500);
    else addNode('tree',x,y,0);
    // Дополнительные деревья — лес, а не пустая поляна.
-   for(let j=0;j<3;j++){
+   for(let j=0;j<2;j++){
     const px=x+(rseed(X*91+i,Y*11+j,1)-.5)*340,py=y+(rseed(X*71+j,Y*23+i,2)-.5)*340;
-    if(Math.hypot(px,py)>110)addNode('tree',px,py,0);
+    if(Math.hypot(px,py)>235)addNode('tree',px,py,0);
    }
   }
  }}
@@ -90,7 +133,7 @@ function enterTree(node){
  player.x=0;player.y=310;
  for(let i=0;i<soldiers.length;i++){soldiers[i].x=-35+i%7*11;soldiers[i].y=345+Math.floor(i/7)*6}
  for(let i=0;i<elites.length;i++){elites[i].x=35+i%7*11;elites[i].y=345+Math.floor(i/7)*6}
- updateViewButtons();notify('🌳 ВНУТРИ СМОЛЯНОГО ДЕРЕВА: 20 рабочих и 10 воинов. Термиты живут здесь!');
+ updateViewButtons();notify('🌳 Термитник внутри смоляного дерева: 20 рабочих, 10 воинов!');
 }
 function leaveTree(){
  if(view!=='tree'||!treeReturn)return;
@@ -113,21 +156,25 @@ function capacities(){return {workers:(rooms.fungus?.level||0)*50,soldiers:(room
 function occupancy(){return soldiers.length+elites.length*5}
 function buildCost(id){return id==='queen'?{resin:2000,nectar:500}:{leaf:2400}}
 function enqueueAnt(kind){const cap=capacities();if(kind==='worker'&&workers.length+state.queue.filter(q=>q.kind==='worker').length>=cap.workers){notify('Грибница заполнена. Улучши её!');return}if(kind!=='worker'&&occupancy()+[...state.queue,...state.eggs].filter(q=>q.kind!=='worker').reduce((a,q)=>a+(q.kind==='elite'?5:1),0)+(kind==='elite'?5:1)>cap.soldiers){notify('В казарме не хватает мест! Построй казарму.');return}let cost=kind==='worker'?1:kind==='soldier'?15:200;if(R.mush<cost){notify('Нужно '+cost+' 🍄 грибных ресурсов');return}R.mush-=cost;state.queue.push({kind});notify('🥚 Заказ добавлен: '+({worker:'рабочий',soldier:'солдат',elite:'элитный листорез'}[kind]));drawPanel()}
-function addUnit(kind){const a={x:rand(-28,28),y:rand(-28,28),hp:kind==='soldier'?150+(state.queenLv-1)*25:500+(state.queenLv-1)*50,max:kind==='soldier'?150+(state.queenLv-1)*25:500+(state.queenLv-1)*50,dmg:kind==='soldier'?50+(state.queenLv-1)*10:200+(state.queenLv-1)*20,walk:0,dir:0,target:null,kind,hit:0};if(kind==='worker'){a.hp=80;a.max=80;a.job='mush';a.carry=null;a.phase='seek';a.dest=null;a.speed=70;workers.push(a)}else if(kind==='soldier')soldiers.push(a);else elites.push(a);notify('🐜 Родился '+({worker:'рабочий',soldier:'солдат',elite:'элитный листорез'}[kind]));}
+function addUnit(kind){const a={x:rand(-28,28),y:rand(-28,28),hp:kind==='soldier'?150+(state.queenLv-1)*25:500+(state.queenLv-1)*50,max:kind==='soldier'?150+(state.queenLv-1)*25:500+(state.queenLv-1)*50,dmg:kind==='soldier'?50+(state.queenLv-1)*10:200+(state.queenLv-1)*20,walk:0,dir:0,target:null,kind,hit:0};if(kind!=='worker'){a.hp+=learnedCount('evolution')*2;a.max+=learnedCount('evolution')*2}
+ if(kind==='worker'){a.hp=80;a.max=80;a.job='mush';a.carry=null;a.phase='seek';a.dest=null;a.speed=70;workers.push(a)}else if(kind==='soldier')soldiers.push(a);else elites.push(a);notify('🐜 Родился '+({worker:'рабочий',soldier:'солдат',elite:'элитный листорез'}[kind]));}
 function nearestNode(kind,worker){let best=null,bs=1e99;for(const n of nodes)if(n.amount>0&&(n.kind===kind)){let dd=(n.x-worker.x)**2+(n.y-worker.y)**2;if(dd<bs){best=n;bs=dd}}return best}
 function stepMove(a,tx,ty,speed,dt){let dx=tx-a.x,dy=ty-a.y,d=Math.hypot(dx,dy);if(d<1.2)return true;let move=Math.min(d,speed*dt);a.x+=dx/d*move;a.y+=dy/d*move;a.dir=Math.atan2(dy,dx)+PI/2;a.walk=(a.walk||0)+move*.1;return d<=move+1.5}
 function emit(x,y,color,n=5,force=40){for(let i=0;i<n;i++)particles.push({x,y,vx:rand(-force,force),vy:rand(-force,force),life:rand(.28,.8),max:1,color,size:rand(1,3)})}
-function attack(att,target,damage,dt){if(!target||target.hp<=0)return;target.hp-=damage*dt;if(Math.random()<dt*12){emit(target.x,target.y,'#efb064',1,16);if(Math.random()<.4)floaters.push({x:target.x,y:target.y,txt:'-'+Math.ceil(damage*.3),life:.7,color:'#ffbf80'})}att.hit=.14;if(target.hp<=0){if(enemies.includes(target)||activeHostiles().includes(target)){let arr=enemies.includes(target)?enemies:activeHostiles();arr.splice(arr.indexOf(target),1);state.kills++;let xp=target.type==='termWorker'?5:target.type==='termSoldier'?15:Math.ceil(target.max/20);state.xp+=xp;floaters.push({x:target.x,y:target.y,txt:'+'+xp+' XP',life:1,color:'#c9ff8d'});emit(target.x,target.y,'#d3ac75',15,90);let goal=70+state.lv*state.lv*22;while(state.xp>=goal){state.xp-=goal;state.lv++;state.sp++;state.maxHp+=4;player.hp=Math.min(state.maxHp,player.hp+24);notify('✨ Новый уровень '+state.lv+'! Очко навыков +1');goal=70+state.lv*state.lv*22}}}}
+function attack(att,target,damage,dt){if(!target||target.hp<=0)return;target.hp-=damage*dt;if(Math.random()<dt*12){emit(target.x,target.y,'#efb064',1,16);if(Math.random()<.4)floaters.push({x:target.x,y:target.y,txt:'-'+Math.ceil(damage*.3),life:.7,color:'#ffbf80'})}att.hit=.14;if(target.hp<=0){if(enemies.includes(target)||activeHostiles().includes(target)){let arr=enemies.includes(target)?enemies:activeHostiles();arr.splice(arr.indexOf(target),1);
+ if(target.type==='bee'&&target.guardFlower){const flower=nodes.find(n=>n.id===target.guardFlower);
+  if(flower){flower.beeCount=Math.max(0,flower.beeCount-1);flower.guard=flower.beeCount>0;flower.beeCheck=0;}}
+ state.kills++;let xp=target.type==='termWorker'?5:target.type==='termSoldier'?15:Math.ceil(target.max/20);state.xp+=xp*(1+learnedCount('mastery')*.02);floaters.push({x:target.x,y:target.y,txt:'+'+xp+' XP',life:1,color:'#c9ff8d'});emit(target.x,target.y,'#d3ac75',15,90);let goal=70+state.lv*state.lv*22;while(state.xp>=goal){state.xp-=goal;if(state.lv>=1000){state.xp=0;break}state.lv++;state.sp++;state.maxHp+=4;player.hp=Math.min(state.maxHp,player.hp+24);notify('✨ Новый уровень '+state.lv+'! Очко навыков +1');goal=70+state.lv*state.lv*22}}}}
 function tick(dt){clock+=dt;state.time+=dt;state.day=Math.floor(state.time/340)+1;if(view==='surface')extendWorld();const hostiles=activeHostiles();
- if(state.pdest){if(stepMove(player,state.pdest.x,state.pdest.y,145+skills.speed*9,dt))state.pdest=null}
+ if(state.pdest){if(stepMove(player,state.pdest.x,state.pdest.y,145+skills.speed*9+learnedCount('explore')*0.4,dt))state.pdest=null}
  if(state.harvesting&&state.harvesting.amount>0&&dist(player,state.harvesting)<39){playerGather+=dt;if(playerGather>=1){let n=Math.floor(playerGather);playerGather-=n;n=Math.min(n,state.harvesting.amount);state.harvesting.amount-=n;R[state.harvesting.kind]+=n;if(view==='tree'&&activeTree&&state.harvesting.kind==='resin'){activeTree.node.amount=Math.max(0,activeTree.node.amount-n)}emit(player.x,player.y,'#f0d28c',2,10)}}
  if(state.target&&state.target.hp>0){let t=state.target,d=dist(player,t);if(d>32){state.pdest={x:t.x,y:t.y};}else{state.pdest=null;attack(player,t,(20+skills.attack*5),dt);if(Math.random()<dt*9)emit(t.x,t.y,'#f8df93',1)}}else state.target=null;
  for(const a of workers){a.delay=Math.max(0,(a.delay||0)-dt);if(a.delay>0)continue;
-  if(a.carry){if(stepMove(a,randBaseX(a),randBaseY(a),a.speed,dt)){R[a.carry]++;state.worked++;a.carry=null;a.phase='seek';a.target=null}}else {let desired=workMode==='auto'?a.job:workMode;if(desired==='resin'&&R.resin>220)desired='mush';if(desired==='nectar'&&R.nectar>80)desired='mush';if(!a.target||a.target.amount<=0||a.target.kind!==desired)a.target=nearestNode(desired,a);if(a.target&&stepMove(a,a.target.x,a.target.y,a.speed,dt)){a.target.amount--;a.carry=desired;a.phase='return';emit(a.x,a.y,desired==='mush'?'#ffe0a7':'#80b26d',2,15)}}
+  if(a.carry){if(stepMove(a,randBaseX(a),randBaseY(a),a.speed*(1+learnedCount('gather')*.012),dt)){R[a.carry]++;state.worked++;state.xp+=.03*(1+learnedCount('biology')*.02);a.carry=null;a.phase='seek';a.target=null}}else {let desired=workMode==='auto'?a.job:workMode;if(desired==='resin'&&R.resin>220)desired='mush';if(desired==='nectar'&&R.nectar>80)desired='mush';if(!a.target||a.target.amount<=0||a.target.kind!==desired)a.target=nearestNode(desired,a);if(a.target&&stepMove(a,a.target.x,a.target.y,a.speed*(1+learnedCount('gather')*.012),dt)){a.target.amount--;a.carry=desired;a.phase='return';emit(a.x,a.y,desired==='mush'?'#ffe0a7':'#80b26d',2,15)}}
  }
  for(const a of [...soldiers,...elites]){a.hit=Math.max(0,a.hit-dt);let near=null,dis=Infinity;for(const e of hostiles){let d=dist(a,e);if(d<dis){dis=d;near=e}}let combat=near&&dis<175;let dest=null;
  if(state.armyOrder==='attack'&&state.armyTarget&&state.armyTarget.hp>0){near=state.armyTarget;dis=dist(a,near);combat=true}
- if(combat){if(dis>(a.kind==='elite'?31:26))dest=near;else attack(a,near,a.dmg,dt)}
+ if(combat){if(dis>(a.kind==='elite'?31:26))dest=near;else attack(a,near,a.dmg*(1+learnedCount('tactics')*.012),dt)}
  else if(a.kind==='elite'&&state.armyOrder==='harvest'){
   if(a.carry){if(stepMove(a,randBaseX(a),randBaseY(a),82,dt)){R.leaf+=a.carry;a.carry=0;a.target=null;emit(a.x,a.y,'#b2d469',4,20)}}
   else{if(!a.target||a.target.amount<=0||a.target.kind!=='leaf')a.target=nearestNode('leaf',a);
@@ -140,7 +187,7 @@ function tick(dt){clock+=dt;state.time+=dt;state.day=Math.floor(state.time/340)+
  if(state.target===e||state.armyTarget===e)e.agro=true;const isTermite=e.type.startsWith('term');const isBee=e.type==='bee';if(e.scouting&&!e.agro){
   e.pherot=(e.pherot||0)-dt;
   if(e.pherot<=0){e.pherot=2;pheromones.push({x:e.x,y:e.y,life:600});}
-  if(Math.hypot(e.x,e.y)>85){stepMove(e,0,0,e.speed*1.3,dt);continue}
+  if(Math.hypot(e.x,e.y)>85-Math.min(22,learnedCount('stealth'))){stepMove(e,0,0,e.speed*1.3,dt);continue}
   e.scouting=false;e.returning=true;notify('🚨 Разведчик обнаружил вход в муравейник!');
  }
  if(e.returning&&!e.agro){
@@ -151,15 +198,57 @@ function tick(dt){clock+=dt;state.time+=dt;state.day=Math.floor(state.time/340)+
  const threatRange=(e.type==='child'||e.type==='cow')?(e.agro?95:0):isTermite?90:isBee?65:155;
  if(focus&&dd<threatRange){e.agro=true;if(dd>23)stepMove(e,focus.x,focus.y,e.speed,dt);else{const protect=focus===player?player:focus;attack(e,protect,e.dmg,dt);if(protect.hp<=0){if(protect===player){player.hp=state.maxHp;player.x=0;player.y=view==='tree'?315:26;state.pdest=null;state.target=null;notify('💫 Командир восстановился!')}else{let arr=soldiers.includes(protect)?soldiers:elites;let idx=arr.indexOf(protect);if(idx>=0)arr.splice(idx,1);emit(protect.x,protect.y,'#c38c65',14)}}}}
  else if(e.agro&&focus&&dd<260){stepMove(e,focus.x,focus.y,e.speed*.8,dt)}else{e.agro=false;if(e.wanderT<=0){e.wanderT=rand(3,10);e.tx=e.homeX+rand(-75,75);e.ty=e.homeY+rand(-75,75)}stepMove(e,e.tx,e.ty,e.speed*.48,dt)}}
+ if(state.queenAlive)state.queenHP=Math.min(500+100*(state.queenLv-1),state.queenHP+learnedCount('biology')*.006*dt);
+ // Giant flower grows capacity hourly; only bees produce new nectar.
+ nectarTime+=dt;
+ while(nectarTime>=3600){nectarTime-=3600;
+  for(const flower of nodes)if(flower.kind==='nectar'){
+   flower.max++;flower.amount=Math.min(flower.max,flower.amount+flower.beeCount*10);flower.flowerHours++;
+  }
+ }
+ for(const flower of nodes){if(flower.kind!=='nectar'||flower.beeCount>0)continue;
+  flower.beeCheck+=dt;if(flower.beeCheck>=600){flower.beeCheck=0;if(Math.random()<.25){flower.beeCount=3;flower.guard=true}}
+ }
+ // Queen shelter system: queen may be evacuated if hostile ants enter the entrance unopposed.
+ const invaders=view==='surface'?enemies.filter(e=>(e.raider||e.agro)&&Math.hypot(e.x,e.y)<65):[];
+ const colonyProtected=soldiers.length+elites.length>0;
+ const safeRooms=Object.entries(rooms).filter(([id])=>id!=='queen').sort((a,b)=>b[1].hp-a[1].hp);
+ state.queenEvacuated=invaders.length>0&&workers.length>=2&&safeRooms.length>0;
+ state.queenRoomId=state.queenEvacuated?safeRooms[0][0]:'queen';
+ if(invaders.length>0){
+   // Wandering threats can damage cavern infrastructure. 0 HP destroys the room.
+   const target=safeRooms[safeRooms.length-1];
+   if(target){target[1].hp=Math.max(0,target[1].hp-invaders.length*(colonyProtected?5:18)*dt);
+     if(target[1].hp===0){delete rooms[target[0]];notify('🚨 Разрушена комната: '+roomNames[target[0]])}}
+ }
+ if(invaders.length>0&&state.queenAlive){
+   const shield=colonyProtected?.15:1,evac=state.queenEvacuated?.25:1;
+   state.queenHP=Math.max(0,state.queenHP-invaders.length*20*dt*shield*evac*(1-learnedCount('survival')*.01));
+   if(state.queenHP===0){state.queenAlive=false;state.queenFormerLevel=state.queenLv;state.royalPortions=0;state.queenIncubation=0;notify('🚨 Королева потеряна. Колония живёт, но нужны 3 порции маточного корма.');}
+ }
+ if(!state.queenAlive&&state.royalPortions>=3){
+   state.queenIncubation+=dt;
+   if(state.queenIncubation>=10800){
+     state.queenAlive=true;state.royalLarvae--;state.queenLv=Math.ceil(state.queenFormerLevel/2);
+     rooms.queen.level=state.queenLv;rooms.queen.hp=1000+500*(state.queenLv-1);
+     state.queenHP=500+100*(state.queenLv-1);state.queenIncubation=0;state.royalPortions=0;
+     notify('👑 Новая королева! Уровень '+state.queenLv);
+   }
+ }
  // Строительство расходует доставленные листья постепенно; экономическая шкала отражает труд рабочих.
  for(const [id,site] of Object.entries(sites)){
-   if(R.leaf>0){const rate=Math.max(1,workers.filter(a=>a.job==='leaf').length)*dt/4;site.acc=(site.acc||0)+rate;let transfer=Math.min(R.leaf,Math.floor(site.acc),site.need-site.given);if(transfer>0){site.acc-=transfer;site.given+=transfer;R.leaf-=transfer}}
+   if(R.leaf>0){const rate=Math.max(1,workers.filter(a=>a.job==='leaf').length)*dt*(1+learnedCount('construction')*.01)/4;site.acc=(site.acc||0)+rate;let transfer=Math.min(R.leaf,Math.floor(site.acc),site.need-site.given);if(transfer>0){site.acc-=transfer;site.given+=transfer;R.leaf-=transfer}}
    if(site.given>=site.need){rooms[id]={level:1,hp:1000};delete sites[id];notify('🏗️ Достроена: '+roomNames[id])}
  }
- if(state.repair&&R.resin>0){repairClock+=dt;while(repairClock>=10){repairClock-=10;const room=Object.values(rooms).find(v=>v.hp<1000+(v.level-1)*500);if(!room)break;room.hp=Math.min(1000+(room.level-1)*500,room.hp+100);R.resin--}}
- if(toDig.length&&digMode){digProgress+=dt*Math.max(1,workers.length);while(digProgress>=1&&toDig.length){digProgress--;const [gx,gy]=toDig.shift();dug.add(gx+','+gy)}}
+ if(state.repair&&R.resin>0){repairClock+=dt*Math.max(1,workers.length)*(1+learnedCount('construction')*.01);while(repairClock>=10){repairClock-=10;const room=Object.values(rooms).find(v=>v.hp<1000+(v.level-1)*500);if(!room)break;room.hp=Math.min(1000+(room.level-1)*500,room.hp+100);R.resin--}}
+ if(toDig.length&&digMode){digProgress+=dt*(Math.max(1,workers.length)+(view==='nest'?1:0));while(digProgress>=1&&toDig.length){digProgress--;const [gx,gy]=toDig.shift();dug.add(gx+','+gy)}}
+ // Cancellation and demolition returns must be carried by workers; no immediate teleporting into inventory.
+ returnClock+=dt*Math.max(1,workers.length);
+ while(returnClock>=5){let k=Object.keys(pendingReturns).find(k=>pendingReturns[k]>=1);if(!k)break;
+  returnClock-=5;pendingReturns[k]--;R[k]++;
+ }
  // Королева откладывает яйца раз в 5 секунд при свободном месте; инкубация последовательная
- state.eggClock+=dt;if(state.eggClock>=5){state.eggClock-=5;if(state.queue.length&&state.eggs.length<capacities().eggs&&rooms.incubator)state.eggs.push(state.queue.shift())}
+ state.eggClock+=dt;if(state.eggClock>=5){state.eggClock-=5;if(state.queenAlive&&state.queue.length&&state.eggs.length<capacities().eggs&&rooms.incubator)state.eggs.push(state.queue.shift())}
  if(state.eggs.length&&rooms.incubator){state.incClock+=dt;let req=state.eggs[0].kind==='worker'?30:state.eggs[0].kind==='soldier'?10:60;if(state.incClock>=req){state.incClock-=req;addUnit(state.eggs.shift().kind)}}else state.incClock=0;
  if(view==='tree'&&activeTree){
   // Спавн только внутри активной локации каждые 10 секунд. Воины: лимит 30, рабочие: без лимита.
@@ -170,16 +259,26 @@ function tick(dt){clock+=dt;state.time+=dt;state.day=Math.floor(state.time/340)+
  }
  if(view==='surface')spawnScouts+=dt;if(view==='surface'&&spawnScouts>7){spawnScouts=0;const col=aiColonies[0];if(Math.hypot(col.x-player.x,col.y-player.y)<1450){if(!col.scout||col.scout.hp<=0){col.scout=spawnEnemy('enemyAnt',-550,260);col.scout.scouting=true}/* Данные разведки доходят до противника через возвращение разведчика. */}}
  for(let i=pheromones.length-1;i>=0;i--){pheromones[i].life-=dt;if(pheromones[i].life<=0)pheromones.splice(i,1)}
- for(const col of aiColonies){if(!col.known||!Number.isFinite(col.raidWait))continue;
+ for(const col of aiColonies){if(!col.known||col.status!=='war'||!Number.isFinite(col.raidWait))continue;
   col.raidWait-=dt;
   if(col.raidWait<=0&&view==='surface'&&Math.hypot(player.x,player.y)<950){
    let n=4+Math.floor(rand(0,5));for(let i=0;i<n;i++){let angle=rand(-.8,.8)+Math.PI,rr=rand(310,440);let raider=spawnEnemy('enemyAnt',Math.cos(angle)*rr,Math.sin(angle)*rr);raider.raider=true}
    notify('⚔️ Вражеские муравьи приближаются к базе!');col.raidWait=rand(130,330)
   }
  }
+ diplomacyClock+=dt;
+ if(diplomacyClock>=75){diplomacyClock=0;
+  for(let i=1;i<aiColonies.length;i++){
+   const c=aiColonies[i],delta=rand(-7,7);
+   c.relation=clamp(Math.round(c.relation+delta+learnedCount('authority')*.03),-100,100);
+   if(c.status==='neutral'&&c.relation>65)c.status='ally';
+   if(c.status==='ally'&&c.relation<0)c.status='neutral';
+   if(c.relation<-75&&c.status!=='peace')c.status='war';
+  }
+ }
  for(const p of particles){p.x+=p.vx*dt;p.y+=p.vy*dt;p.life-=dt;p.vx*=.96;p.vy*=.96}for(let i=particles.length-1;i>=0;i--)if(particles[i].life<=0)particles.splice(i,1);
  for(const f of floaters){f.y-=25*dt;f.life-=dt}for(let i=floaters.length-1;i>=0;i--)if(floaters[i].life<=0)floaters.splice(i,1);
- if(Math.hypot(player.x,player.y)>20){};player.hp=Math.min(state.maxHp,player.hp+.9*dt+skills.defense*.25*dt);
+ if(Math.hypot(player.x,player.y)>20){};player.hp=Math.min(state.maxHp,player.hp+.9*dt+skills.defense*.25*dt+learnedCount('regeneration')*.035*dt);
 }
 function randBaseX(a){return a.bx??(a.bx=rand(-23,23))}function randBaseY(a){return a.by??(a.by=rand(-18,18))}
 function matPattern(){const cv=document.createElement('canvas');cv.width=cv.height=256;const g=cv.getContext('2d');g.fillStyle='#244b31';g.fillRect(0,0,256,256);for(let i=0;i<3800;i++){let x=rseed(i,91)*256,y=rseed(i,37)*256,k=rseed(i,71);g.fillStyle=k<.2?'#1a412d':k<.46?'#2a5435':k<.62?'#355c3b':'#20472e';g.fillRect(x,y,1+k*2,1+k*2)}for(let i=0;i<65;i++){let x=rseed(i,711)*256,y=rseed(i,777)*256;g.strokeStyle=i%2?'#4f7d43':'#3c6a39';g.lineWidth=.7;g.beginPath();g.moveTo(x,y);g.lineTo(x+rand(-3,3),y-rand(3,8));g.stroke()}return cv}
@@ -310,10 +409,42 @@ function drawNode(g,n){
 function bg(g,width,height,isSoil=false){const pat=isSoil?soil:grass;const left=cam.x-width/(2*zoom),top=cam.y-height/(2*zoom),right=cam.x+width/(2*zoom),bottom=cam.y+height/(2*zoom);g.fillStyle=g.createPattern(pat,'repeat');g.fillRect(left-500,top-500,right-left+1000,bottom-top+1000);if(!isSoil){let cell=160,startX=Math.floor(left/cell),endX=Math.ceil(right/cell),startY=Math.floor(top/cell),endY=Math.ceil(bottom/cell);for(let ix=startX;ix<=endX;ix++)for(let iy=startY;iy<=endY;iy++){let x=ix*cell+rseed(ix,iy,1)*140,y=iy*cell+rseed(ix,iy,2)*140;let n=rseed(ix,iy,3);if(n>.84){g.fillStyle='#0e291b88';g.beginPath();g.ellipse(x+3,y+5,10,6,0,0,TAU);g.fill();g.fillStyle=n>.96?'#a49b78':'#37663a';g.beginPath();g.ellipse(x,y,6+n*14,6+n*8,0,0,TAU);g.fill()}else if(n>.78){g.fillStyle='#5f8655';for(let j=0;j<5;j++){g.fillRect(x+(j-2)*3,y-rseed(j,ix,iy)*8,2,7)}}}}
 }
 function drawNestSurface(g){
- spriteArt(g,'pile',0,10,142,0);
- spriteArt(g,'tunnel',0,-5,43,43);
- g.fillStyle='#f6d9a5';g.font='bold 12px sans-serif';g.textAlign='center';g.fillText('ВАШ МУРАВЕЙНИК',0,-66);
+ g.save();g.imageSmoothingEnabled=false;
+ // Staggered earth rings with an open walkable mouth. Avoid copied atlas tiles with label backgrounds.
+ const x=0,y=0;
+ const layers=[{rx:103,ry:60,dy:19,c:'#31241a'},{rx:91,ry:53,dy:13,c:'#61402c'},
+ {rx:80,ry:45,dy:8,c:'#94613e'},{rx:69,ry:36,dy:2,c:'#b47a4b'}];
+ for(const L of layers){g.fillStyle=L.c;g.beginPath();g.ellipse(x,y+L.dy,L.rx,L.ry,-.06,0,TAU);g.fill()}
+ for(let j=0;j<65;j++){
+   let ang=rseed(j,7,4)*TAU,r=35+Math.sqrt(rseed(j,21))*62;
+   const px=Math.round(Math.cos(ang)*r),py=Math.round(14+Math.sin(ang)*r*.45);
+   if(Math.abs(px)<26&&Math.abs(py)<15)continue;
+   g.fillStyle=['#6f442d','#c08c5a','#d49c64','#3d3024'][j%4];
+   g.fillRect(px,py,3+(j%3),2+(j%2));
+ }
+ // Shadow and illuminated rim of a real tunnel, not a rectangular sprite.
+ g.fillStyle='#271c16';g.beginPath();g.ellipse(0,-6,37,25,0,0,TAU);g.fill();
+ g.strokeStyle='#f3b879';g.lineWidth=4;g.beginPath();g.ellipse(0,-7,34,24,0,Math.PI*1.06,Math.PI*1.96);g.stroke();
+ g.fillStyle='#0b100d';g.beginPath();g.ellipse(0,-7,28,18,0,0,TAU);g.fill();
+ for(let i=-3;i<=3;i++){
+  g.fillStyle=i%2?'#427c39':'#69a04d';g.fillRect(i*23-2,32+Math.abs(i)*2,3,8);g.fillRect(i*23,35+Math.abs(i)*2,3,4)
+ }
+ g.fillStyle='#ffe5aa';g.font='bold 11px system-ui';g.textAlign='center';
+ g.fillText('⬇ ВХОД В МУРАВЕЙНИК',0,-74);
+ if(dug.size){
+  const pileUnits=Math.min(70,dug.size);
+  const piles=Math.min(6,Math.ceil(pileUnits/10));
+  for(let i=0;i<piles;i++){
+   const bx=-145+i*55,by=50+Math.sin(i*2.5)*9;
+   g.fillStyle='#3d2a20';g.fillRect(bx-24,by+4,46,9);
+   g.fillStyle='#97623b';g.fillRect(bx-18,by-5,35,13);
+   g.fillStyle='#b58150';g.fillRect(bx-11,by-10,20,7);
+  }
+  g.font='bold 10px system-ui';g.fillStyle='#e3c095';g.fillText('ГРУНТ '+dug.size,0,94);
+ }
+ g.restore();
 }
+
 function drawEnemies(g,list=enemies){
  const types={termWorker:'termWorker',termSoldier:'termSoldier',enemyAnt:'enemyAnt',spider:'spider',beetle:'beetle',ladybug:'ladybug',scorpion:'scorpion',mantis:'mantis',bee:'bee',crab:'crab',cow:'cow',child:'child'};
  const widths={termWorker:35,termSoldier:45,enemyAnt:40,spider:59,beetle:51,ladybug:43,scorpion:65,mantis:69,bee:48,crab:66,cow:125,child:59};
@@ -327,24 +458,131 @@ function drawEnemies(g,list=enemies){
 function drawHealth(g,x,y,v,color,width=34){g.fillStyle='#111c1cbb';g.fillRect(x-width/2-1,y-1,width+2,5);g.fillStyle=color;g.fillRect(x-width/2,y,width*clamp(v,0,1),3)}
 function drawUnits(g){for(const a of workers){if(Math.hypot(a.x-cam.x,a.y-cam.y)>940/zoom)continue;drawSprite(g,'worker',a.x,a.y,30,a.dir,a.walk,0);if(a.carry){g.font='16px serif';g.textAlign='center';g.fillText(({mush:'🍄',leaf:'🍃',resin:'🟠',nectar:'🍯'}[a.carry]),a.x+12,a.y-14)}}for(const a of soldiers)drawSprite(g,'soldier',a.x,a.y,39,a.dir,a.walk,a.hit);for(const a of elites){drawSprite(g,'elite',a.x,a.y,51,a.dir,a.walk,a.hit);if(a.carry){spriteArt(g,'leaf',a.x+16,a.y-14,24,0)}}drawSprite(g,'player',player.x,player.y,46,player.dir,player.walk,player.hit);drawHealth(g,player.x,player.y-33,player.hp/state.maxHp,'#8fdb76',47);g.textAlign='center';g.font='bold 11px sans-serif';g.fillStyle='#ffe9ae';g.fillText('КОМАНДИР',player.x,player.y-42);if(state.pdest){g.strokeStyle='#f5d98b55';g.lineWidth=1.5;g.setLineDash([5,9]);g.beginPath();g.moveTo(player.x,player.y);g.lineTo(state.pdest.x,state.pdest.y);g.stroke();g.setLineDash([]);g.beginPath();g.arc(state.pdest.x,state.pdest.y,7+Math.sin(clock*5)*2,0,TAU);g.stroke()}}
 function drawParticles(g){for(const p of particles){g.globalAlpha=clamp(p.life/.8,0,1);g.fillStyle=p.color;g.fillRect(p.x-p.size/2,p.y-p.size/2,p.size,p.size)}g.globalAlpha=1;g.textAlign='center';g.font='bold 14px sans-serif';for(const f of floaters){g.globalAlpha=clamp(f.life,0,1);g.fillStyle=f.color;g.fillText(f.txt,f.x,f.y)}g.globalAlpha=1}
+function caveShape(g,x,y,rx,ry,seed){
+ g.beginPath();const n=42;
+ for(let i=0;i<=n;i++){
+  const a=i*TAU/n,noise=1+(rseed(seed,i% n,14)-.5)*.09;
+  const px=x+Math.cos(a)*rx*noise,py=y+Math.sin(a)*ry*noise;
+  if(i===0)g.moveTo(px,py);else g.lineTo(px,py)
+ }g.closePath()
+}
+function drawCaveProps(g,id,x,y){
+ g.save();g.translate(Math.round(x),Math.round(y-10));g.imageSmoothingEnabled=false;
+ const block=(x,y,w,h,c)=>{g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))};
+ const palettes={brown:'#a87448',dark:'#38241a',gold:'#f0bd58',light:'#ffe19a',green:'#6ea44b'};
+ // Every icon is built in the same sharp pixel language as the world, not a clipped label from the atlas.
+ if(id==='queen'){
+  block(-19,3,38,21,'#8f5737');block(-16,-13,32,31,'#f0d49b');block(-12,-18,24,37,'#f8e5af');
+  block(-15,-25,7,11,'#edaf35');block(-3,-29,7,15,'#e7af37');block(9,-25,7,11,'#edaf35');
+  block(-17,-17,34,6,'#d58b27');block(-9,-7,5,5,'#fff2ce');block(5,1,5,5,'#ffe6af');
+ } else if(id==='incubator'){
+  for(let i=0;i<4;i++){let xx=-22+(i%2)*23,yy=-16+Math.floor(i/2)*17;
+   block(xx,yy+4,19,15,'#ba875a');block(xx+3,yy-7,13,26,'#f2d8a5');block(xx+6,yy-10,7,7,'#fff1d0')}
+ } else if(id==='fungus'){
+  for(let i=0;i<3;i++){let xx=-27+i*23,yy=8+(i%2)*5;
+   block(xx+8,yy-17,7,28,'#dfc19a');block(xx,yy-26,24,13,'#b8783e');
+   block(xx+4,yy-31,16,6,'#d49b51');block(xx+7,yy-25,4,3,'#f3d5a8')}
+ } else if(id==='leaf'){
+  for(let i=0;i<4;i++){g.save();g.translate(-12+i*8,(i%2)*6);g.rotate(i*.32-.4);
+   block(-15,-15,30,25,i%2?'#679d47':'#8fba56');block(-1,-16,2,31,'#bfd881');g.restore()}
+ } else if(id==='barracks'||id==='guard'){
+  block(-25,-22,50,47,'#3e4b49');block(-21,-18,42,39,id==='guard'?'#78929b':'#927c56');
+  block(-4,-13,8,29,'#e0d8af');block(-13,-3,26,6,'#d9cca2');
+  block(-17,21,34,5,'#28312e');
+ } else if(id==='resin'||id==='nectar'){
+  block(-24,-2,48,20,'#4f3021');block(-17,-19,34,41,'#7b4d31');
+  block(-8,-27,16,42,id==='resin'?'#efa42d':'#c365cd');block(-3,-18,6,24,id==='resin'?'#ffdb61':'#ff9eed');
+ } else if(id==='hospital'){
+  block(-19,-20,38,40,'#e6c8a6');block(-6,-14,12,28,'#c84c3c');block(-14,-6,28,12,'#c84c3c');
+ } else if(id==='training'){
+  block(-22,18,44,7,'#a9744a');block(-19,-4,11,23,'#8d9a8c');block(8,-4,11,23,'#8d9a8c');
+  block(-21,-11,42,8,'#d1b88e');
+ } else if(id==='lab'){
+  block(-15,6,30,15,'#5b8caa');block(-8,-24,16,35,'#9ac6cf');block(-13,10,26,11,'#5991bd');
+  block(-5,-17,10,7,'#d2ebee');
+ } else if(id==='command'){
+  block(-19,-26,7,49,'#80502f');block(-12,-22,34,27,'#ae583e');block(-6,-16,22,11,'#d98549');
+ } else {block(-15,-15,30,30,palettes.gold)}
+ g.restore();
+}
+function drawRoomCave(g,id,room,x,y){
+ const main=id==='queen',rx=main?84:76,ry=main?65:56;
+ g.save();
+ g.fillStyle='#261912';caveShape(g,x,y,rx+13,ry+12,id.length*39);g.fill();
+ g.strokeStyle='#9a6a47';g.lineWidth=7;caveShape(g,x,y,rx+5,ry+4,id.length*39);g.stroke();
+ g.fillStyle='#443025';caveShape(g,x,y,rx,ry,id.length*39);g.fill();
+ // Pixel pebbles in the cavern floor.
+ for(let i=0;i<28;i++){
+  let a=rseed(i,id.length*5,21)*TAU,r=Math.sqrt(rseed(i,27,id.length))*.83;
+  let px=x+Math.cos(a)*rx*r,py=y+Math.sin(a)*ry*r;
+  g.fillStyle=i%3===0?'#78533a':'#5e412e';g.fillRect(Math.round(px),Math.round(py),2+(i%4),2+(i%3))
+ }
+ g.fillStyle='#d19b62';g.fillRect(x-rx*.75,y+ry*.56,rx*1.5,2);
+ if(room){
+  drawCaveProps(g,id,x,y);
+  g.font='bold 10px system-ui';g.textAlign='center';g.fillStyle='#fff0c9';
+  g.fillText(roomNames[id],x,y+36);
+  g.font='9px system-ui';g.fillStyle='#d7b67d';g.fillText('УРОВЕНЬ '+room.level,x,y+48);
+  if(room.hp<1000+(room.level-1)*500)drawHealth(g,x,y-ry*.8,room.hp/(1000+(room.level-1)*500),'#99cb7e',70)
+ } else {
+  g.font='11px system-ui';g.textAlign='center';g.fillStyle='#e6c990';
+  g.fillText(sites[id]?'🔨 СТРОИТСЯ':'ЗАЛОЖЕННЫЙ ЗАЛ',x,y);
+  if(sites[id]){g.font='9px system-ui';g.fillText(Math.floor(sites[id].given)+' / '+sites[id].need,x,y+15)}
+ }
+ g.restore();
+}
 function drawUnderground(g){
  bg(g,w,h,true);
- for(const point of dug){const [gx,gy]=point.split(',').map(Number);g.fillStyle='#271a16';g.fillRect(gx*digUnit,gy*digUnit,digUnit,digUnit)}
- if(digMode){g.strokeStyle='#e9cf8d';g.lineWidth=1;for(const [gx,gy]of toDig)g.strokeRect(gx*digUnit,gy*digUnit,digUnit,digUnit)}
- g.save();g.strokeStyle='#2a1c17';g.lineWidth=33;g.lineCap='round';g.beginPath();g.moveTo(0,-420);g.lineTo(0,-30);for(const id of Object.keys(rooms)){if(id==='queen')continue;let[x,y]=roomLayout[id];g.moveTo(0,-30);g.lineTo(x,y)}g.stroke();g.strokeStyle='#907254';g.lineWidth=23;g.stroke();g.strokeStyle='#33241c';g.lineWidth=17;g.stroke();
- for(const [id,room] of Object.entries(rooms)){
-  const [x,y]=roomLayout[id];const base=id==='queen'?112:92;
-  g.save();g.translate(x,y);g.fillStyle='#17140fbf';g.beginPath();g.ellipse(3,10,base*.63,base*.56,0,0,TAU);g.fill();g.restore();
-  spriteArt(g,roomSprite[id],x,y,base,base);
-  g.textAlign='center';g.font='bold 10px sans-serif';g.fillStyle='#ffe6ad';g.fillText(roomNames[id],x,y+base*.55+3);
-  g.fillStyle='#fff0c3';g.font='bold 10px sans-serif';g.fillText('УР. '+room.level,x,y+base*.55+17);
-  if(room.hp<1000+(room.level-1)*500)drawHealth(g,x,y-base*.52,room.hp/(1000+(room.level-1)*500),'#9bc36a',70);
+ // Exposed vertical soil strata and stones distinguish the underworld from the surface.
+ let west=cam.x-w/(2*zoom)-160,east=cam.x+w/(2*zoom)+160;
+ let north=cam.y-h/(2*zoom)-160,south=cam.y+h/(2*zoom)+160;
+ g.save();g.imageSmoothingEnabled=false;
+ const tile=32;
+ for(let gx=Math.floor(west/tile);gx<Math.ceil(east/tile);gx++)for(let gy=Math.floor(north/tile);gy<Math.ceil(south/tile);gy++){
+  let z=rseed(gx,gy,8);if(z<.78)continue;
+  let x=gx*tile+Math.floor(rseed(gx,gy,2)*16),y=gy*tile+Math.floor(rseed(gx,gy,3)*13);
+  g.fillStyle=z>.96?'#8d735c':z>.89?'#765943':'#3b2c23';g.fillRect(x,y,4+(z>.93?5:0),3);
+  if(z>.96){g.fillStyle='#d0ad83';g.fillRect(x+2,y+1,3,2)}
  }
- drawSprite(g,'queen',0,-30,61,0,clock*.3,0);
- for(let i=0;i<Math.min(workers.length,24);i++){const ang=i*TAU/Math.max(5,workers.length)+clock*.3;drawSprite(g,'worker',Math.cos(ang)*51,Math.sin(ang)*35-30,23,ang,clock+i,0)}
- g.font='bold 12px sans-serif';g.textAlign='center';g.fillStyle='#f7daa2';g.fillText('ВХОД НА ПОВЕРХНОСТЬ',0,-390);
- if(digMode){g.fillStyle='#ecd49c66';for(const cell of dug){let p=cell.split(',').map(Number);g.fillRect(p[0]*digUnit,p[1]*digUnit,digUnit,digUnit)}}
  g.restore();
+ const entranceY=-322, queen=roomLayout.queen;
+ const coords=[[0,entranceY],[0,-235],[0,-120],[queen[0],queen[1]]];
+ // Open shafts and soft soil walls: no floating room buttons.
+ const lines=[];for(let i=1;i<coords.length;i++)lines.push([coords[i-1],coords[i]]);
+ for(const id of Object.keys(rooms).concat(Object.keys(sites))){if(id==='queen')continue;let target=roomLayout[id];let relay=[Math.sign(target[0])*78,Math.sign(target[1])*40-24];lines.push([queen,relay],[relay,target])}
+ for(let k=0;k<3;k++){
+  g.lineCap='round';g.lineJoin='round';g.lineWidth=[73,61,50][k];g.strokeStyle=['#241810','#976a46','#392820'][k];
+  g.beginPath();for(const [a,b] of lines){g.moveTo(a[0],a[1]);g.lineTo(b[0],b[1])}g.stroke();
+ }
+ // Gravel along tunnel floors
+ for(let j=0;j<110;j++){
+  let segment=lines[j%Math.max(1,lines.length)];if(!segment)continue;
+  let t=rseed(j,66,2),xx=segment[0][0]*(1-t)+segment[1][0]*t,yy=segment[0][1]*(1-t)+segment[1][1]*t;
+  xx+=(rseed(j,77,1)-.5)*36;yy+=(rseed(j,83,1)-.5)*28;
+  g.fillStyle=j%2?'#6d4932':'#896142';g.fillRect(Math.round(xx),Math.round(yy),2+j%3,2)
+ }
+ // Start chamber and extra rooms are actual caves, without a square atlas background.
+ for(const [id,room] of Object.entries(rooms)){
+  const [x,y]=roomLayout[id];drawRoomCave(g,id,room,x,y)
+ }
+ for(const [id] of Object.entries(sites))if(!rooms[id]){
+  const [x,y]=roomLayout[id];drawRoomCave(g,id,null,x,y)
+ }
+ // Dark burrow mouth at the top; clicking opens the surface.
+ caveShape(g,0,entranceY,46,41,444);g.fillStyle='#221914';g.fill();
+ caveShape(g,0,entranceY,35,30,445);g.fillStyle='#090d0b';g.fill();
+ g.strokeStyle='#cb925c';g.lineWidth=4;g.beginPath();g.arc(0,entranceY,30,Math.PI*1.1,Math.PI*1.9);g.stroke();
+ g.fillStyle='#ffe2a7';g.textAlign='center';g.font='bold 11px system-ui';g.fillText('⬆ НА ПОВЕРХНОСТЬ',0,entranceY-59);
+ // Clear queen and living workers inside, plus egg piles in the incubator.
+ if(rooms.queen&&state.queenHP>0){const qloc=roomLayout[state.queenRoomId]||queen;drawSprite(g,'queen',qloc[0],qloc[1]-4,57,0,clock*.3,0);}
+ if(rooms.incubator){let [xx,yy]=roomLayout.incubator;for(let i=0;i<Math.min(6,state.eggs.length);i++)spriteArt(g,'egg',xx-27+(i%3)*20,yy+10+Math.floor(i/3)*14,15,17)}
+ for(let i=0;i<Math.min(workers.length,22);i++){
+  let a=i*2.399+clock*.10,x=Math.cos(a)*51,y=Math.sin(a)*32;
+  drawSprite(g,'worker',x,y-32,22,a,clock*.2+i,0)
+ }
+ // The user can excavate genuine terrain cells around the rooms.
+ for(const spot of dug){const [gx,gy]=spot.split(',').map(Number);g.fillStyle='#34251d';g.fillRect(gx*digUnit,gy*digUnit,digUnit,digUnit)}
+ if(digMode){for(const [gx,gy] of toDig){g.strokeStyle='#f4d18d';g.lineWidth=1;g.strokeRect(gx*digUnit,gy*digUnit,digUnit,digUnit)}}
 }
 
 function drawTreeInterior(g){
@@ -378,13 +616,12 @@ function drawTreeInterior(g){
   for(const a of soldiers)drawSprite(g,'soldier',a.x,a.y,39,a.dir,a.walk,a.hit);
   for(const a of elites)drawSprite(g,'elite',a.x,a.y,51,a.dir,a.walk,a.hit);
   drawSprite(g,'player',player.x,player.y,46,player.dir,player.walk,player.hit);
-  g.strokeStyle='#ffcf6c';g.setLineDash([4,5]);g.beginPath();g.arc(player.x,player.y,26,0,TAU);g.stroke();g.setLineDash([]);
   drawHealth(g,player.x,player.y-42,player.hp/state.maxHp,'#b0d88b',38);
 }
 
 function worldToScreen(x,y){return {x:(x-cam.x)*zoom+w/2,y:(y-cam.y)*zoom+h/2}}
 function screenToWorld(x,y){return {x:(x-w/2)/zoom+cam.x,y:(y-h/2)/zoom+cam.y}}
-function render(){if(!w||!h)return;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#163222';ctx.fillRect(0,0,w,h);ctx.save();ctx.translate(w/2,h/2);ctx.scale(zoom,zoom);ctx.translate(-cam.x,-cam.y);
+function render(){if(!w||!h)return;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.imageSmoothingEnabled=false;ctx.fillStyle='#163222';ctx.fillRect(0,0,w,h);ctx.save();ctx.translate(w/2,h/2);ctx.scale(zoom,zoom);ctx.translate(-cam.x,-cam.y);
  if(view==='surface'){bg(ctx,w,h);drawGrassTufts(ctx);
  for(const trail of pheromones){ctx.fillStyle='rgba(240,103,86,'+Math.min(.42,trail.life/1300)+')';ctx.beginPath();ctx.arc(trail.x,trail.y,3,0,TAU);ctx.fill()}
  drawNestSurface(ctx);for(const n of nodes)if(Math.abs(n.x-cam.x)<w/(2*zoom)+100&&Math.abs(n.y-cam.y)<h/(2*zoom)+140)drawNode(ctx,n);drawEnemies(ctx);drawUnits(ctx);}else if(view==='tree')drawTreeInterior(ctx);else drawUnderground(ctx);drawParticles(ctx);ctx.restore();let darkness=(Math.sin(clock/60)+1)/2;ctx.fillStyle=`rgba(12,23,37,${(view==='surface'?.09+darkness*.15:.13)})`;ctx.fillRect(0,0,w,h);
@@ -392,6 +629,21 @@ function render(){if(!w||!h)return;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillSty
  const v=ctx.createRadialGradient(w/2,h/2,Math.min(w,h)*.28,w/2,h/2,Math.max(w,h)*.83);v.addColorStop(0,'#0000');v.addColorStop(1,'#010b08a6');ctx.fillStyle=v;ctx.fillRect(0,0,w,h);
 }
 function miniDraw(){const g=mc;g.clearRect(0,0,264,264);
+ if(view==='nest'){
+  g.fillStyle='#4b372a';g.fillRect(0,0,264,264);
+  const mx=x=>132+x*.28, my=y=>132+(y+55)*.28;
+  g.strokeStyle='#b58b65';g.lineWidth=9;g.lineCap='round';
+  g.beginPath();g.moveTo(mx(0),my(-322));g.lineTo(mx(0),my(-32));
+  for(const id of Object.keys(rooms).concat(Object.keys(sites))){if(id==='queen')continue;
+   const [rx,ry]=roomLayout[id];g.moveTo(mx(0),my(-32));g.lineTo(mx(rx),my(ry))}
+  g.stroke();
+  for(const id of Object.keys(rooms).concat(Object.keys(sites))){const [rx,ry]=roomLayout[id];
+   g.fillStyle=rooms[id]?'#dfb57c':'#7b6a52';g.beginPath();g.ellipse(mx(rx),my(ry),12,10,0,0,TAU);g.fill();
+   g.fillStyle='#37271f';g.beginPath();g.ellipse(mx(rx),my(ry),8,6,0,0,TAU);g.fill()}
+  g.fillStyle='#fbe3aa';g.font='bold 12px system-ui';g.textAlign='center';g.fillText('ПОДЗЕМЕЛЬЕ',132,249);
+  return;
+ }
+
  if(view==='tree'&&activeTree){
   g.fillStyle='#241a15';g.fillRect(0,0,264,264);g.strokeStyle='#a77a49';g.lineWidth=12;
   g.beginPath();g.ellipse(132,132,93,118,0,0,TAU);g.stroke();
@@ -401,20 +653,54 @@ function miniDraw(){const g=mc;g.clearRect(0,0,264,264);
 g.fillStyle='#143922';g.fillRect(0,0,264,264);const factor=.10;const pos=(x,y)=>({x:132+(x-cam.x)*factor,y:132+(y-cam.y)*factor});g.strokeStyle='#426e4c';g.lineWidth=1;for(let i=-5;i<6;i++){g.beginPath();g.moveTo(i*30+132,0);g.lineTo(i*30+132,264);g.moveTo(0,i*30+132);g.lineTo(264,i*30+132);g.stroke()}for(const n of nodes){let p=pos(n.x,n.y);if(p.x<0||p.x>264||p.y<0||p.y>264)continue;g.fillStyle=({mush:'#d2a068',leaf:'#8fc568',resin:'#f6b43e',tree:'#4b8943',nectar:'#f2a2d0'})[n.kind];g.beginPath();g.arc(p.x,p.y,n.kind==='resin'?4:2,0,TAU);g.fill()}for(const e of enemies){let p=pos(e.x,e.y);if(p.x<0||p.x>264||p.y<0||p.y>264)continue;g.fillStyle='#ff6d60';g.fillRect(p.x-2,p.y-2,4,4)}{let p=pos(0,0);g.strokeStyle='#eed19a';g.lineWidth=3;g.beginPath();g.arc(p.x,p.y,7,0,TAU);g.stroke()}const pl=pos(player.x,player.y);g.fillStyle='#c6ff9e';g.beginPath();g.arc(pl.x,pl.y,4,0,TAU);g.fill();g.strokeStyle='#ffffff77';g.strokeRect(132-w/(2*zoom)*factor,132-h/(2*zoom)*factor,w/zoom*factor,h/zoom*factor)}
 function updateHUD(){const items=[['iconMush',R.mush],['iconLeaf',R.leaf],['iconResin',R.resin],['iconNectar',R.nectar]];$('resourceBar').innerHTML=items.map(v=>`<span class="pill">${SPRITE_IMAGE.naturalWidth?spriteUI(v[0],23):v[0]} <b>${fmt(v[1])}</b></span>`).join('')+`<span class="pill"><small>🐜</small><b>${workers.length} / ${capacities().workers}</b><small>раб.</small></span><span class="pill"><small>⚔️</small><b>${occupancy()} / ${capacities().soldiers}</b><small>мест</small></span>`;
  $('healthBar').style.width=(100*player.hp/state.maxHp)+'%';$('playerLv').textContent='ур. '+state.lv;$('currentTarget').textContent=state.target?'· в бою':state.pdest?'· в пути':'· свободен';$('day').textContent='☀️ День '+state.day;$('tm').textContent=String(Math.floor(state.time/60)%60).padStart(2,'0')+':'+String(Math.floor(state.time)%60).padStart(2,'0');$('spd').textContent='×'+scaleTime;$('speedBtn').textContent='⏩ ×'+scaleTime;
- $('colonySummary').textContent='Колония · '+(workers.length+soldiers.length+elites.length+2);$('armySummary').textContent='Рабочие '+workers.length+' · Солдаты '+soldiers.length+' · Элита '+elites.length;$('eggSummary').textContent='Яйца '+state.eggs.length+'/'+capacities().eggs+' · Заказы '+state.queue.length;$('objective').textContent=view==='tree'&&activeTree?'🌳 Термиты '+activeTree.hostiles.length+' · смола '+fmt(activeTree.node.amount):occupancy()>0?'Побед: '+state.kills+' · XP '+Math.floor(state.xp):'Цель: построить казарму';}
+ $('colonySummary').textContent='Колония · '+(workers.length+soldiers.length+elites.length+1+(state.queenAlive?1:0));$('armySummary').textContent='Рабочие '+workers.length+' · Солдаты '+soldiers.length+' · Элита '+elites.length;$('eggSummary').textContent='Яйца '+state.eggs.length+'/'+capacities().eggs+' · Заказы '+state.queue.length;$('objective').textContent=view==='tree'&&activeTree?'🌳 Термиты '+activeTree.hostiles.length+' · смола '+fmt(activeTree.node.amount):occupancy()>0?'Побед: '+state.kills+' · XP '+Math.floor(state.xp):'Цель: построить казарму';}
 function b(label,fn,disabled=false){return `<button ${disabled?'disabled':''} data-action="${fn}">${label}</button>`}
 function drawPanel(){const p=$('panel');if(!panel)return;let html=`<button class="close" data-action="close">✕</button>`;
- if(panel==='colony')html+=`<h2>🏡 Колония</h2><p>Королева откладывает яйца. Инкубатор выращивает их по одному.</p><div class="panelRow">👑 Королева <strong>${state.queenHP} HP · ур. ${state.queenLv}</strong></div><div class="panelRow">🐜 Рабочие <strong>${workers.length} / ${capacities().workers}</strong></div><div class="panelRow">⚔️ Солдаты <strong>${soldiers.length} + ${elites.length} элит.</strong></div><div class="panelRow">🥚 Инкубатор <strong>${state.eggs.length} / ${capacities().eggs}</strong></div><h3>Вырастить муравья</h3><div class="gridBtns">${b('🐜 Рабочий · 1 🍄','ant:worker')}${b('⚔️ Солдат · 15 🍄','ant:soldier')}${b('🦷 Листорез · 200 🍄','ant:elite')}</div><p>Выращивание: рабочий — 30 с; солдат — 10 с; листорез — 60 с. Яйцо появляется после 5 секунд.</p><h3>Распределение рабочих</h3><div class="gridBtns">${[['auto','🤖 Авто'],['mush','🍄 Грибы'],['leaf','🍃 Листья'],['resin','🟠 Смола'],['nectar','🍯 Нектар']].map(a=>`<button class="${workMode===a[0]?'selected':''}" data-action="work:${a[0]}">${a[1]}</button>`).join('')}</div><div class="notice">Каждый рабочий переносит ровно 1 единицу за рейс и передвигается вдвое медленнее командира.</div>`;
+ if(panel==='colony')html+=`<h2>🏡 Колония</h2><p>Королева откладывает яйца. Инкубатор выращивает их по одному.</p><div class="panelRow">👑 Королева <strong>${state.queenAlive?state.queenHP+" HP · ур. "+state.queenLv:"нет · кризис"}</strong></div><div class="panelRow">🐜 Рабочие <strong>${workers.length} / ${capacities().workers}</strong></div><div class="panelRow">⚔️ Солдаты <strong>${soldiers.length} + ${elites.length} элит.</strong></div><div class="panelRow">🥚 Инкубатор <strong>${state.eggs.length} / ${capacities().eggs}</strong></div><div class="panelRow">Запасная личинка <strong>${state.royalLarvae}</strong></div>${state.queenAlive?"":`<p>Маточный корм: ${state.royalPortions}/3 порций. Выращивание: ${Math.floor(state.queenIncubation/60)}/180 мин.</p>${b("👑 Приготовить порцию корма", "queen:portion")}`}<h3>Вырастить муравья</h3><div class="gridBtns">${b('🐜 Рабочий · 1 🍄','ant:worker')}${b('⚔️ Солдат · 15 🍄','ant:soldier')}${b('🦷 Листорез · 200 🍄','ant:elite')}</div><p>Выращивание: рабочий — 30 с; солдат — 10 с; листорез — 60 с. Яйцо появляется после 5 секунд.</p><h3>Распределение рабочих</h3><div class="gridBtns">${[['auto','🤖 Авто'],['mush','🍄 Грибы'],['leaf','🍃 Листья'],['resin','🟠 Смола'],['nectar','🍯 Нектар']].map(a=>`<button class="${workMode===a[0]?'selected':''}" data-action="work:${a[0]}">${a[1]}</button>`).join('')}</div><div class="notice">Каждый рабочий переносит ровно 1 единицу за рейс и передвигается вдвое медленнее командира.</div>`;
  if(panel==='army')html+=`<h2>⚔️ Управление армией</h2><p>Приказы распространяются на всех твоих боевых муравьёв. На карте коснись врага для атаки командиром.</p><div class="panelRow">Солдаты <strong>${soldiers.length}</strong></div><div class="panelRow">Элитные листорезы <strong>${elites.length}</strong></div><div class="panelRow">Вместимость <strong>${occupancy()} / ${capacities().soldiers}</strong></div><div class="gridBtns">${[['follow','🐜 Следовать'],['guard','🛡️ Оборона'],['patrol','👁️ Патруль'],['attack','🎯 Цель атаки'],['harvest','🍃 Листорезы: 5 листьев']].map(a=>`<button class="${state.armyOrder===a[0]?'selected':''}" data-action="order:${a[0]}">${a[1]}</button>`).join('')}</div><p>Приказ «Цель атаки»: затем коснись врага на карте. Он станет целью всей армии.</p><h3>Боевые характеристики</h3><div class="panelRow">Командир <strong>${20+skills.attack*5} урона/с</strong></div><div class="panelRow">Солдат ур. королевы ${state.queenLv}<strong>${150+(state.queenLv-1)*25} HP · ${50+(state.queenLv-1)*10}/с</strong></div><div class="panelRow">Листорез ур. королевы ${state.queenLv}<strong>${500+(state.queenLv-1)*50} HP · ${200+(state.queenLv-1)*20}/с</strong></div>`;
- if(panel==='build')html+=`<h2>🏗️ Строительство</h2><p>У каждой комнаты может быть только один экземпляр. Максимальный уровень — 10.</p>`+roomDefs.map(([id,icon,name])=>{let rm=rooms[id],cost=buildCost(id),fee=Object.entries(cost).map(([k,v])=>fmt(v)+' '+({leaf:'🍃',resin:'🟠',nectar:'🍯'})[k]).join(' + ');let ucost=rm?Math.floor(120*rm.level*rm.level):0;return `<div class="panelRow"><div>${icon} <b>${name}</b><div class="small">${rm?'Уровень '+rm.level+' · '+rm.hp+' HP':sites[id]?'Строится · '+Math.floor(sites[id].given)+' / '+sites[id].need+' 🍃':'Постройка · '+fee}</div></div>${rm?b('⬆️ '+ucost+' 🍄','upgrade:'+id,rm.level>=10||R.mush<ucost):sites[id]?b('Отменить','cancel:'+id):b('Строить','build:'+id,false)}</div>`}).join('')+`<h3>Автоматический ремонт</h3>${b(state.repair?'✅ Включён':'❌ Выключен','repair')}<p>1 смола = 100 HP ремонта. 1 рабочий ремонтирует 1 порцию 10 секунд.</p>`;
- if(panel==='skills')html+=`<h2>✨ Навыки командира</h2><p>Уровень ${state.lv} · Опыт ${Math.floor(state.xp)} / ${70+state.lv*state.lv*22} · Доступно очков: <strong>${state.sp}</strong></p><div class="progress"><div style="width:${Math.round(100*state.xp/(70+state.lv*state.lv*22))}%"></div></div>`+[['attack','⚔️ Сила укуса','+5 урона в секунду'],['defense','❤️ Регенерация','+0,25 HP в секунду'],['speed','💨 Скорость','+9 к скорости передвижения'],['command','👑 Командование','+4 к скорости солдат']].map(([id,label,desc])=>`<div class="panelRow"><div><b>${label}</b><div class="small">Уровень ${skills[id]} · ${desc}</div></div>${b('Улучшить','skill:'+id,state.sp<=0)}</div>`).join('')+`<p class="notice">В полном древе запланировано 15 ветвей и 300 навыков; здесь уже работают первые боевые улучшения.</p>`;
- if(panel==='diplomacy')html+=`<h2>🤝 Дипломатия</h2><p>Соседние колонии разведуют мир, заключают союзы и вступают в войны. Их решения зависят от ресурсов, силы и отношений.</p>`+aiColonies.map(c=>`<div class="panelRow"><div>🔴 <b>${c.name}</b><div class="small">${c.known?'Обнаружили твой муравейник':'Твоё расположение пока неизвестно'}</div></div><span class="tag">Враждебны</span></div>`).join('')+`<h3>Новости</h3>`+state.events.map(e=>`<p>• ${e}</p>`).join('')+`<p>Переговоры и полноценные совместные атаки будут развиваться в следующих версиях.</p>`;
+ if(panel==='build')html+=`<h2>🏗️ Строительство</h2><p>У каждой комнаты может быть только один экземпляр. Максимальный уровень — 10.</p>`+roomDefs.map(([id,icon,name])=>{let rm=rooms[id],cost=buildCost(id),fee=Object.entries(cost).map(([k,v])=>fmt(v)+' '+({leaf:'🍃',resin:'🟠',nectar:'🍯'})[k]).join(' + ');let ucost=rm?Math.floor(120*rm.level*rm.level):0;return `<div class="panelRow"><div>${icon} <b>${name}</b><div class="small">${rm?'Уровень '+rm.level+' · '+rm.hp+' HP':sites[id]?'Строится · '+Math.floor(sites[id].given)+' / '+sites[id].need+' 🍃':'Постройка · '+fee}</div></div>${rm?b('⬆️ '+ucost+' 🍄','upgrade:'+id,rm.level>=10||R.mush<ucost)+(id==='queen'?'':b('📍 Перенести','place:'+id)+b('🗑️','demolish:'+id)):sites[id]?b('📍 Разместить','place:'+id)+b('Отменить','cancel:'+id):b('Строить','build:'+id,false)}</div>`}).join('')+`<h3>Автоматический ремонт</h3>${b(state.repair?'✅ Включён':'❌ Выключен','repair')}<p>1 смола = 100 HP ремонта. 1 рабочий ремонтирует 1 порцию 10 секунд.</p>`;
+ if(panel==='skills'){
+ const threshold=70+state.lv*state.lv*22;
+ html+=`<h2>✨ 300 навыков командира</h2><p>Уровень ${state.lv} / 1000 · Очков: <strong>${state.sp}</strong> · XP: ${Math.floor(state.xp)} / ${threshold}</p><div class="progress"><div style="width:${Math.round(100*state.xp/threshold)}%"></div></div>`;
+ html+='<div class="branchTabs">'+skillNames.map(([id,label])=>`<button class="${currentSkillBranch===id?'selected':''}" data-action="branch:${id}">${label}</button>`).join('')+'</div>';
+ html+='<p class="small">В каждой ветке 4 независимые цепочки по 5 ступеней. Предыдущая ступень обязательна. Можно освоить все 300.</p>';
+ const descriptions=['Базовый приём','Опытный приём','Сильный приём','Продвинутый приём','Мастерский приём'];
+ for(const node of skillsAll.filter(n=>n.branch===currentSkillBranch)){
+  let done=!!skillsDetailed[node.id];let disabled=!canLearnSkill(node);
+  html+=`<div class="panelRow"><div><b>${skillTrackNames[node.branch][node.chain]} · ${descriptions[node.tier-1]}</b><div class="small">Ступень ${node.tier}/5 · ${done?'изучено':node.requires&&!skillsDetailed[node.requires]?'нужна предыдущая ступень':'1 очко навыка'}</div></div>${b(done?'✓ Изучено':'Изучить','learn:'+node.id,done||disabled)}</div>`;
+ }
+}
+ if(panel==='diplomacy'){
+  html+=`<h2>🤝 Дипломатия четырёх колоний</h2><p>Ресурсы, территория, военная мощь, общие враги и история отношений влияют на политику.</p>`;
+  html+=aiColonies.map((c,i)=>`<div class="panelRow"><div><b>${c.relation<-40?'🔴':c.relation>30?'🟢':'🟡'} ${c.name}</b><div class="small">${c.status==='war'?'Война':c.status==='ally'?'Союз':c.status==='peace'?'Мир':'Нейтрально'} · Отношения ${c.relation} · солдат ${c.size}</div><div class="small">${c.known?'Знает расположение муравейника':'Не знает расположение базы'}</div></div></div><div class="gridBtns">${b('🕊️ Мир','dip:'+i+':peace',c.status==='peace')}${b('🤝 Союз','dip:'+i+':ally',c.relation<-25)}${b('⚔️ Война','dip:'+i+':war',c.status==='war')}${b('🍄 Обмен 50 🍄 → 50 🍃','dip:'+i+':trade',R.mush<50||c.status==='war')}</div>`).join('');
+  html+='<h3>Хроника</h3>'+state.events.slice(0,8).map(e=>'<p>• '+e+'</p>').join('');
+ }
+
  if(panel==='help')html+=`<h2>❔ Как играть</h2><p>🌳 <b>Дерево:</b> нажми на смоляное дерево или кнопку «Дерево», чтобы попасть внутрь. Все термиты находятся там, на поверхности их нет. У входа есть выход. Обычные деревья встречаются часто.</p><p>🌿 <b>Поверхность:</b> нажимай на землю, чтобы идти; нажми на врага, чтобы атаковать. Рабочие самостоятельно добывают ресурсы и относят их в муравейник.</p><p>🕳️ <b>Подземелье:</b> можно осмотреть 12 комнат и улучшать их через меню «Стройка».</p><p>🐜 <b>Колония:</b> распределяй добычу, заказывай рабочих, солдат и элитных листорезов. Новые юниты рождаются из очереди яиц.</p><p>⚔️ <b>Армия:</b> выбирай охрану, следование, патруль и назначение цели.</p><p>✨ <b>Навыки:</b> за победы начисляется опыт; трать очки на улучшения.</p><p>⏩ <b>Скорость:</b> ×1, ×4 или ×12. Увеличивай масштаб кнопками + и −, карту можно двигать пальцем.</p><div class="notice">Это первая играбельная версия, не законченная реализация всех задуманных систем. Всё работает в едином игровом экране.</div>`;
- p.innerHTML=html;}
-function buttonAction(action){if(action==='close'){setPanel(panel);return}if(action.startsWith('ant:')){enqueueAnt(action.split(':')[1]);return}if(action.startsWith('work:')){workMode=action.split(':')[1];notify('Рабочие: '+({auto:'автоматическое распределение',mush:'сбор грибов',leaf:'сбор листьев',resin:'сбор смолы',nectar:'сбор нектара'})[workMode]);drawPanel();return}if(action.startsWith('order:')){state.armyOrder=action.split(':')[1];state.armyTarget=null;attackMode=state.armyOrder==='attack';notify(attackMode?'🎯 Нажми на врага на карте':'Приказ: '+state.armyOrder);drawPanel();return}
+ const prevScroll=p.scrollTop; p.innerHTML=html; p.scrollTop=prevScroll;}
+function buttonAction(action){if(action==='close'){setPanel(panel);return}if(action==='queen:portion'){royalPortion();drawPanel();return}
+ if(action.startsWith('ant:')){enqueueAnt(action.split(':')[1]);return}if(action.startsWith('work:')){workMode=action.split(':')[1];notify('Рабочие: '+({auto:'автоматическое распределение',mush:'сбор грибов',leaf:'сбор листьев',resin:'сбор смолы',nectar:'сбор нектара'})[workMode]);drawPanel();return}if(action.startsWith('order:')){state.armyOrder=action.split(':')[1];state.armyTarget=null;attackMode=state.armyOrder==='attack';notify(attackMode?'🎯 Нажми на врага на карте':'Приказ: '+state.armyOrder);drawPanel();return}
+ if(action.startsWith('branch:')){currentSkillBranch=action.split(':')[1];const p=$('panel');p.scrollTop=0;drawPanel();return}
+ if(action.startsWith('learn:')){let id=action.slice(6),node=skillsAll.find(n=>n.id===id);if(node&&canLearnSkill(node)){state.sp--;skillsDetailed[id]=true;if(node.branch==='attack')skills.attack++;if(node.branch==='defense')skills.defense++;if(node.branch==='agility')skills.speed++;if(node.branch==='command')skills.command++;notify('✨ Освоен навык: '+id);drawPanel()}return}
+ if(action.startsWith('dip:')){
+  const [,id,cmd]=action.split(':'),col=aiColonies[Number(id)];if(!col)return;
+  if(cmd==='trade'){if(R.mush<50||col.status==='war')return;R.mush-=50;R.leaf+=50;col.relation=Math.min(100,col.relation+2+Math.floor(learnedCount('authority')/5));notify('🍃 Торговля с '+col.name)}
+  else if(cmd==='ally'){if(col.relation<-25)return;col.status='ally';col.relation=Math.max(35,col.relation);notify('🤝 Союз заключён с '+col.name)}
+  else if(cmd==='peace'){col.status='peace';col.relation=Math.max(0,col.relation);col.raidWait=undefined;notify('🕊️ Мир с '+col.name)}
+  else if(cmd==='war'){col.status='war';col.relation=-100;notify('⚔️ Война с '+col.name)}
+  drawPanel();return;
+ }
  if(action.startsWith('skill:')){if(state.sp>0){state.sp--;skills[action.split(':')[1]]++;notify('✨ Навык улучшен!');drawPanel()}return}
  if(action.startsWith('build:')){const id=action.split(':')[1];if(rooms[id]||sites[id])return;const cost=buildCost(id);if(id==='queen'){notify('Королевская уже построена');return}sites[id]={need:cost.leaf,given:0,acc:0};notify('🏗️ Заказ на строительство: '+roomNames[id]);drawPanel();return}
- if(action.startsWith('cancel:')){const id=action.split(':')[1],site=sites[id];if(site){R.leaf+=site.given;delete sites[id];notify('Стройка отменена: листья возвращены');drawPanel()}return}
+ if(action.startsWith('cancel:')){const id=action.split(':')[1],site=sites[id];if(site){pendingReturns.leaf+=site.given;delete sites[id];notify('Стройка отменена: листья возвращены');drawPanel()}return}
+ if(action.startsWith('place:')){placingRoomId=action.split(':')[1];if(!rooms[placingRoomId]&&!sites[placingRoomId])return;changeView('nest');setPanel('');notify('📍 Коснись свободной земли для размещения комнаты');return}
+ if(action.startsWith('demolish:')){
+  const id=action.split(':')[1],rm=rooms[id];if(!rm||id==='queen')return;
+  let upgradeSpent=0;for(let k=1;k<rm.level;k++)upgradeSpent+=120*k*k;
+  pendingReturns.leaf+=Math.floor(2400*.05);
+  pendingReturns.mush+=Math.floor(upgradeSpent*.05);
+  delete rooms[id];notify('🏗️ Комната разобрана, возврат 5% ресурсов рабочими');drawPanel();return
+ }
  if(action.startsWith('upgrade:')){let id=action.split(':')[1],rm=rooms[id];if(!rm||rm.level>=10)return;let cost=Math.floor(120*rm.level*rm.level);if(R.mush<cost){notify('Не хватает грибов!');return}R.mush-=cost;rm.level++;rm.hp=1000+(rm.level-1)*500;if(id==='queen'){state.queenLv=rm.level;state.queenHP=500+(rm.level-1)*100}notify('⬆️ '+roomNames[id]+': уровень '+rm.level);drawPanel();return}
  if(action==='repair'){state.repair=!state.repair;drawPanel()}}
 $('panel').addEventListener('click',ev=>{let target=ev.target.closest('[data-action]');if(target)buttonAction(target.dataset.action)});
@@ -442,10 +728,19 @@ const activePointers=new Map();let pointerStart=null,lastPinch=null;
 canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);activePointers.set(e.pointerId,{x:e.clientX,y:e.clientY});pointerStart={x:e.clientX,y:e.clientY,cx:cam.x,cy:cam.y,moved:false};lastPinch=null});
 canvas.addEventListener('pointermove',e=>{if(!activePointers.has(e.pointerId))return;activePointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(activePointers.size===2){const [a,b]=[...activePointers.values()],dis=Math.hypot(a.x-b.x,a.y-b.y);if(lastPinch)zoom=clamp(zoom*dis/lastPinch,.55,2.25);lastPinch=dis;if(pointerStart)pointerStart.moved=true;return}if(!pointerStart)return;let dx=e.clientX-pointerStart.x,dy=e.clientY-pointerStart.y;if(Math.hypot(dx,dy)>7)pointerStart.moved=true;if(pointerStart.moved){cam.x=pointerStart.cx-dx/zoom;cam.y=pointerStart.cy-dy/zoom;cam.freeUntil=performance.now()+4000}});
 canvas.addEventListener('pointerup',e=>{if(!activePointers.has(e.pointerId))return;activePointers.delete(e.pointerId);if(!pointerStart||pointerStart.moved){pointerStart=null;return}let rect=canvas.getBoundingClientRect(),p=screenToWorld(e.clientX-rect.left,e.clientY-rect.top);pointerStart=null;
+ if(view==='nest'&&placingRoomId){
+  const id=placingRoomId;
+  if(p.y<-250||Math.hypot(p.x,p.y)<125||Object.keys(rooms).concat(Object.keys(sites)).some(k=>k!==id&&Math.hypot(p.x-roomLayout[k][0],p.y-roomLayout[k][1])<166)){
+   notify('📍 Для комнаты нужно свободное место. Выбери другую точку.');return;
+  }
+  roomLayout[id]=[Math.round(p.x),Math.round(p.y)];placingRoomId=null;
+  notify('🏠 '+roomNames[id]+' теперь находится в выбранном месте');return;
+ }
  if(view==='nest'&&digMode){let gx=Math.floor(p.x/digUnit),gy=Math.floor(p.y/digUnit);let count=0;for(let ix=gx-1;ix<=gx+1;ix++)for(let iy=gy-1;iy<=gy+1;iy++){
   if(!dug.has(ix+','+iy)&&!toDig.some(e=>e[0]===ix&&e[1]===iy)){toDig.push([ix,iy]);count++}
  }notify('⛏️ Назначена раскопка: '+count+' пикселей');return}
  if(view==='tree'&&Math.abs(p.x)<75&&p.y>370&&p.y<455){leaveTree();notify('🌿 Ты вышел из дерева');return}
+ if(view==='nest'&&Math.hypot(p.x,p.y+322)<56){changeView('surface');return}
  if(view==='nest'){let close=roomDefs.map(([id])=>({id,d:Math.hypot(p.x-roomLayout[id][0],p.y-roomLayout[id][1])})).sort((a,b)=>a.d-b.d)[0];if(close&&close.d<72){setPanel('build');notify('🏠 '+roomNames[close.id])}else notify('🪨 Здесь можно будет продолжить копать тоннель');return}
  let enemy=activeHostiles().find(v=>Math.hypot(v.x-p.x,v.y-p.y)<34);if(enemy){if(attackMode){state.armyTarget=enemy;state.armyOrder='attack';notify('🎯 Армии приказано атаковать цель!');attackMode=false;setPanel('');}else{state.target=enemy;state.pdest={x:enemy.x,y:enemy.y};notify('⚔️ Атака: '+({termWorker:'термит-рабочий',termSoldier:'термит-воин',spider:'паук',beetle:'жук',ladybug:'божья коровка',scorpion:'скорпион',mantis:'богомол',enemyAnt:'вражеский муравей'})[enemy.type])}return}
  if(view==='tree'&&activeTree){
@@ -455,11 +750,52 @@ canvas.addEventListener('pointerup',e=>{if(!activePointers.has(e.pointerId))retu
  }
  let node=nodes.find(v=>Math.hypot(v.x-p.x,v.y-p.y)<85&&(v.kind==='resin'||v.kind==='tree'));
  if(node){if(node.kind==='resin'){enterTree(node);return}else{notify('🌳 Обычное дерево. Ищи смоляное дерево с янтарём!');return}}
- node=nodes.find(v=>Math.hypot(v.x-p.x,v.y-p.y)<38);if(node){state.pdest={x:node.x,y:node.y};state.target=null;state.harvesting=node;notify('📍 '+({mush:'Гриб',leaf:'Листья',resin:'Смоляное дерево',nectar:'Нектарный цветок'})[node.kind]+' · остаток '+fmt(node.amount));return}
+ node=nodes.find(v=>Math.hypot(v.x-p.x,v.y-p.y)<38);if(node){if(node.kind==='nectar'&&node.beeCount>0){
+   let existing=enemies.filter(e=>e.type==='bee'&&e.guardFlower===node.id).length;
+   for(let i=existing;i<node.beeCount;i++){
+    const ang=i*TAU/Math.max(node.beeCount,1);
+    const bee=spawnEnemy('bee',node.x+Math.cos(ang)*32,node.y+Math.sin(ang)*32);
+    bee.guardFlower=node.id;bee.agro=true;
+   }
+   notify('🐝 На этом цветке охрана: '+node.beeCount+' пчелы!');
+  }state.pdest={x:node.x,y:node.y};state.target=null;state.harvesting=node;notify('📍 '+({mush:'Гриб',leaf:'Листья',resin:'Смоляное дерево',nectar:'Нектарный цветок'})[node.kind]+' · остаток '+fmt(node.amount));return}
  state.target=null;state.harvesting=null;state.pdest=p;cam.freeUntil=performance.now()+500;
 });canvas.addEventListener('pointercancel',e=>{activePointers.delete(e.pointerId);pointerStart=null});canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=clamp(zoom*(e.deltaY<0?1.11:.9),.55,2.25)},{passive:false});
 function resize(){const r=game.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(devicePixelRatio||1,2.5);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr)}new ResizeObserver(resize).observe(game);resize();
-let accHUD=0,accMini=0;function loop(now){let dt=Math.min(.045,(now-last)/1000);last=now;const real=dt,sim=dt*scaleTime;if((view==='surface'||view==='tree')&&performance.now()>cam.freeUntil){let coef=Math.min(1,dt*3.4);cam.x+=(player.x-cam.x)*coef;cam.y+=(player.y-cam.y)*coef}if(view==='surface')tick(sim);else tick(sim);render();accHUD+=real;accMini+=real;if(accHUD>.35){updateHUD();accHUD=0;if(panel&&++dirtyPanel%3===0)drawPanel()}if(accMini>.48){miniDraw();accMini=0}requestAnimationFrame(loop)}
-updateViewButtons();notify('🐜 Колония основана! Смоляное дерево ведёт в термитник. На карте стало больше деревьев.',5000);updateHUD();miniDraw();requestAnimationFrame(loop);
+// Offline continuity for Safari / GitHub Pages. Saved state is compact and never contacts a server.
+const SAVE_KEY='antEmpireNomadKingdomV5';let autosaveClock=0;
+function storeGame(){
+ try{
+  const data={version:5,savedAt:Date.now(),R:{...R},rooms:JSON.parse(JSON.stringify(rooms)),sites:JSON.parse(JSON.stringify(sites)),roomLayout:JSON.parse(JSON.stringify(roomLayout)),
+   player:{x:view==='tree'&&treeReturn?treeReturn.x:player.x,y:view==='tree'&&treeReturn?treeReturn.y:player.y,hp:player.hp},
+   state:{...state,target:null,pdest:null,armyTarget:null,harvesting:null,events:state.events.slice(0,8)},
+   workers:workers.map(a=>({x:a.x,y:a.y,job:a.job,hp:a.hp,max:a.max,speed:a.speed,walk:a.walk,dir:a.dir})),
+   soldiers:soldiers.map(a=>({...a,target:null})),elites:elites.map(a=>({...a,target:null})),
+   skills:{...skills},skillsDetailed:{...skillsDetailed},pendingReturns:{...pendingReturns},dug:[...dug],workMode};
+  localStorage.setItem(SAVE_KEY,JSON.stringify(data));return true;
+ }catch(err){return false}
+}
+function restoreGame(){
+ try{
+  const raw=localStorage.getItem(SAVE_KEY);if(!raw)return false;
+  const data=JSON.parse(raw);if(data.version!==5||!data.state||!data.R)return false;
+  for(const k of Object.keys(R))R[k]=Math.max(0,Number(data.R[k])||0);
+  for(const k of Object.keys(rooms))delete rooms[k];
+  for(const [k,v] of Object.entries(data.rooms||{}))if(roomNames[k])rooms[k]=v;
+  for(const k of Object.keys(sites))delete sites[k];Object.assign(sites,data.sites||{});if(data.roomLayout)for(const [k,pos] of Object.entries(data.roomLayout)){if(k in roomLayout&&Array.isArray(pos))roomLayout[k]=pos}
+  Object.assign(state,data.state);state.target=null;state.pdest=null;state.harvesting=null;state.armyTarget=null;
+  state.queenAlive=data.state.queenAlive!==false;
+  player.x=data.player.x;player.y=data.player.y;player.hp=data.player.hp;
+  workers.length=0;for(const a of data.workers||[])workers.push({...a,carry:null,target:null,delay:0,phase:'seek'});
+  soldiers.length=0;for(const a of data.soldiers||[])soldiers.push(a);
+  elites.length=0;for(const a of data.elites||[])elites.push(a);
+  Object.assign(skills,data.skills||{});Object.assign(skillsDetailed,data.skillsDetailed||{});
+  Object.assign(pendingReturns,data.pendingReturns||{});
+  dug.clear();for(const q of data.dug||[])dug.add(q);
+  workMode=data.workMode||'auto';return true;
+ }catch(err){return false}
+}
+let accHUD=0,accMini=0;function loop(now){let dt=Math.min(.045,(now-last)/1000);last=now;const real=dt,sim=dt*scaleTime;if((view==='surface'||view==='tree')&&performance.now()>cam.freeUntil){let coef=Math.min(1,dt*3.4);cam.x+=(player.x-cam.x)*coef;cam.y+=(player.y-cam.y)*coef}if(view==='surface')tick(sim);else tick(sim);render();accHUD+=real;accMini+=real;if(accHUD>.35){updateHUD();accHUD=0;if(panel&&++dirtyPanel%3===0)drawPanel()}if(accMini>.48){miniDraw();accMini=0}autosaveClock+=real;if(autosaveClock>=20){autosaveClock=0;storeGame()}requestAnimationFrame(loop)}
+window.addEventListener('pagehide',storeGame);const loadedSave=restoreGame();updateViewButtons();notify(loadedSave?'💾 Поселение восстановлено из сохранения.':'🐜 Колония основана! Нажимай на вход, чтобы войти в подземелье.',4000);updateHUD();miniDraw();requestAnimationFrame(loop);
 })();
 </script></body></html>
