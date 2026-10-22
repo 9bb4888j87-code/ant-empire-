@@ -861,7 +861,7 @@ function buttonAction(action){if(action.startsWith('exp18:')){forestAction018(ac
 $('panel').addEventListener('click',ev=>{let target=ev.target.closest('[data-action]');if(target)buttonAction(target.dataset.action)});
 SPRITE_IMAGE.onload=()=>{
  document.querySelectorAll('[data-panel]').forEach(b=>{
- const data={colony:'iconColony',army:'iconArmy',build:'iconBuild',skills:'iconSkills',diplomacy:'iconDiplomacy',expeditions:'iconExplore',help:'iconEgg'}[b.dataset.panel];
+ const data={colony:'iconColony',army:'iconArmy',build:'iconBuild',skills:'iconSkills',diplomacy:'iconDiplomacy',expeditions:'iconSurface',help:'iconEgg'}[b.dataset.panel];
  const i=b.querySelector('i');if(i)i.innerHTML=spriteUI(data,31);
  });
 };
